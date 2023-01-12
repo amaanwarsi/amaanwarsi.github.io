@@ -1,5 +1,4 @@
 :root {
-  --theme-color: #F27826;
   --theme-dark-lite: #ffffff;
   --background-color: #191919;
   --card-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
@@ -328,16 +327,28 @@ a {
   margin-bottom: 2.5rem;
 }
 
-.section {
+section {
   height: 100vh;
 }
 
-#particles-js {
-  height: 100%;
-  width: 100%;
+
+
+.scroll-down{
   position: fixed;
-  z-index: -10000;
+  top: 45%;
+  right: 2%;
+  z-index: 99999;
+  color: var(--theme-dark-lite);
+  writing-mode:tb-rl;
+  white-space:nowrap;
+  display:block;
+  text-decoration: none;
 }
+
+.scroll-down:hover, .scroll-down:active{
+  color: var(--theme-color);
+}
+
 
 /* Hero Section */
 .hero {
@@ -1207,7 +1218,7 @@ footer p {
 .text-divider {
   display: flex;
   align-items: center;
-  font-size: var(--text-sm);
+  font-size: 1.2rem;
   text-transform: uppercase;
   --text-divider-gap: 1rem;
 }
