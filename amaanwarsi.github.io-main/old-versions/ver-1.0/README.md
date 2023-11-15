@@ -1,1 +1,0 @@
-# amaanwarsi.github.io
