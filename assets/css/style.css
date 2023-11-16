@@ -1168,6 +1168,7 @@ footer a {
     }
 
     #contact .section-content {
+        flex-direction: column;
         gap: 3rem;
     }
 
