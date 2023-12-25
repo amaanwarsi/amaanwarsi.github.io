@@ -469,11 +469,6 @@ header {
     transform: scale(1.1);
 }
 
-#skills{
-    z-index: 2;
-    background: #fff;
-}
-
 .skills-content .card {
     width: 30%;
     box-shadow: none;
@@ -917,12 +912,6 @@ footer {
     background: var(--secondary-color);
     font-size: 1.7rem;
     color: var(--primary-color);
-    -webkit-border-top-left-radius: 30px;
-    -webkit-border-top-right-radius: 30px;
-    -moz-border-radius-topleft: 30px;
-    -moz-border-radius-topright: 30px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
 }
 
 footer ul {
@@ -1179,6 +1168,7 @@ footer a {
     }
 
     #contact .section-content {
+        flex-direction: column;
         gap: 3rem;
     }
 

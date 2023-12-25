@@ -35,7 +35,7 @@ typewriter
 
 
 window.addEventListener('scroll', () => {
-  nav_header.classList.toggle("sticky", window.scrollY > 40);
+  nav_header.classList.toggle("sticky", window.scrollY > 60);
 });
 
 
@@ -74,6 +74,17 @@ counters.forEach(counter => {
 });
 
 
+const form = document.querySelector("form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  var name = document.querySelector("#fc-generated-1-name").value,
+    // mail = document.querySelector("#fc-generated-1-email").value,
+    msg = document.querySelector("#fc-generated-1-message").value,
+    subject = "Mail from " + name + " via Portfolio";
+
+  // alert(name+'\n '+email+'\n '+msg)
+
+  window.location.href = "mailto:itsamaan.warsi@gmail.com?subject=" + subject + "&body=" + msg;
+});
 
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
