@@ -2,12 +2,23 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
     <title>Amaan Warsi</title>
+    <meta name="title" content="Amaan Warsi - Portfolio">
+    <meta name="description"
+        content="A dedicated B.Tech student and web developer with a passion for coding and a knack for problem-solving.">
+    <meta name="keywords"
+        content="amaan warsi, mr. amaan warsi, aman warsi, aaman warsi, warsi,  aman warshi, amaan warsi website, web developer, freelancer, amaan warsi personal site, personal portfolio website, personal portfolio website templates, personal portfolio website github, personal portfolio website using html and css, personal portfolio website templates free, personal portfolio source code, personal portfolio github, personal portfolio website design">
+    <meta name="robots" content="index,follow">
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,600;0,700;1,40&display=swap"
+        rel="stylesheet">
     <link rel='stylesheet' href='https://unpkg.com/emoji.css/dist/emoji.min.css'>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -17,6 +28,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.css"
         integrity="sha512-wJgJNTBBkLit7ymC6vvzM1EcSWeM9mmOu+1USHaRBbHkm6W9EgM0HY27+UtUaprntaYQJF75rc8gjxllKs5OIQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
     <!-- Schema.org Person JSON-LD Script -->
     <script type="application/ld+json">
     {
@@ -54,13 +67,14 @@
 
     <!-- nav starts -->
     <header class="d-flex justify-space-between align-items-center">
-        <a href="#home"><img src="./assets/images/logo.png" class="rotate-animation logo"></a>
+        <a href="#home" aria-label="Home"><img src="./assets/images/logo.png" alt="Logo" class="rotate-animation logo"
+                height="45"></a>
         <nav class="active nav d-flex justify-center-md align-items-center">
             <ul class="d-flex justify-center-md align-items-center flex-column-md">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">skills</a></li>
-                <li><a href="#testinomials">testinomials</a></li>
-                <li><a href="#contact">contact</a></li>
+                <li><a href="#about" aria-label="About">About</a></li>
+                <li><a href="#skills" aria-label="Skills">skills</a></li>
+                <li><a href="#testinomials" aria-label="Testinomials">testinomials</a></li>
+                <li><a href="#contact" aria-label="Contact">contact</a></li>
                 <li class="hide-lg"><a class="github-button" href="https://github.com/amaanwarsi"
                         data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large"
                         aria-label="Follow @amaanwarsi on GitHub">Follow @amaanwarsi</a></li>
@@ -78,25 +92,6 @@
     <!-- nav ends -->
 
     <main>
-        <ul class="background">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-
         <!-- hero starts -->
         <section id="home" class="hero section d-flex justify-center align-items-center flex-column">
             <div class="hero-content">
@@ -204,11 +199,11 @@
                         </p>
 
 
-                        <a href="assets/docs/Amaan Warsi.pdf" target="_blank" type="button" class="btn"
-                            title="Resume">Download Resume</a>
+                        <a href="assets/docs/Amaan Warsi.pdf" aria-label="Resume" target="_blank" type="button"
+                            class="btn" title="Resume">Download Resume</a>
                     </div>
                     <div data-aos="fade-left" data-aos-duration="1500">
-                        <img src="./assets/images/road-trip.png" alt="image" class="responsive-img">
+                        <img src="./assets/images/road-trip.png" loading="lazy" alt="image" class="responsive-img">
                     </div>
                 </div>
             </div>
@@ -330,7 +325,6 @@
         <!-- message ends -->
 
         <!-- contact starts -->
-
         <section id="contact" class="card section">
             <h1 class="heading">Contact</h1>
             <div class="section-content flex-column-md">
@@ -365,9 +359,6 @@
                     </form>
                 </div>
             </div>
-
-
-
         </section>
 
         <!-- contact end -->
@@ -378,7 +369,8 @@
     <footer>
         <div class="footer-start d-flex justify-evenly align-items-center flex-column-md text-center">
             <div class="footer-heading d-flex align-items-center flex-row">
-                <a href="#home"><img src="assets/images/logo.png" class="rotate-animation logo"></a>
+                <a href="#home" aria-label="Home"><img src="assets/images/logo.png" alt="Logo" loading="lazy"
+                        class="rotate-animation logo" height="45"></a>
                 <h2>Amaan <span class="colored-span">Warsi</span></h2>
             </div>
             <ul>
@@ -388,17 +380,14 @@
                         Image by vectorpouch on Freepik</a></li>
                 <li><a href="https://pixabay.com/">Images by Pixabay,</a> <a href="https://tablericons.com/">Icons by
                         tablericons</a></li>
-                <li><a href="https://www.w3schools.com/">w3schools.com,</a> <a
+                <li> <a
                         href="https://www.behance.net/gallery/182545093/PROTFOLIO-WEBSITE-DESIGN-UIUX/modules/1031234573">Behance.net,</a>
                     <a href="https://formcarry.com/contact-form-generator">formcarry.com</a>
+                    <a href="https://ionicabizau.github.io/emoji.css/">emoji.css,</a>
                 </li>
-                <li><a href="https://mycolor.space/">mycolor.space,</a> <a
-                        href="https://necolas.github.io/normalize.css/">Normalize.css,</a> <a
-                        href="https://ionicabizau.github.io/emoji.css/">emoji.css,</a> <a
-                        href="https://swiperjs.com/">Swiper JS,</a> </li>
-                <li><a href="https://safi.me.uk/typewriterjs/">Typewriter JS,</a> <a
-                        href="https://michalsnik.github.io/aos/">AOS,</a> <a
-                        href="https://stackoverflow.com/">stackoverflow.</a></li>
+                <li> <a href="https://swiperjs.com/">Swiper JS,</a> <a
+                        href="https://safi.me.uk/typewriterjs/">Typewriter JS,</a> <a
+                        href="https://michalsnik.github.io/aos/">AOS.</a></li>
             </ul>
 
             <div class="">
@@ -473,7 +462,6 @@
 
     <!-- REQUIRED FOR JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
     <!-- Toast Plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -482,83 +470,6 @@
     <script src="./assets/js/script.js"></script>
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <script>
-        $(function () {
-            $(".formcarryForm").submit(function (e) {
-                e.preventDefault();
-                var href = $(this).attr("action");
-                // REQUIRED FOR LOADER
-                var form = $(this);
-                var href = form.attr("action");
-                var button = form.find('button[type="submit"]');
-
-                // REQUIRED FOR LOADER
-                // Save original button text so we can use it after successful request.
-                var buttonText = button.text();
-                // Create a new element with the SVG loader
-                // Reference: https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/90-ring-with-bg.svg
-                var loader = $('<svg fill="#fff" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><style>.spinner_ajPY{transform-origin:center;animation:spinner_AtaB .75s infinite linear}@keyframes spinner_AtaB{100%{transform:rotate(360deg)}}</style><path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" opacity=".25"/><path d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z" class="spinner_ajPY"/></svg>');
-
-                // REQUIRED FOR LOADER
-                // Change button text with loader
-                button.html(loader);
-                button.prop('disabled', true);
-
-
-                var myToast = $.toast({
-                    text: 'Sending your form message.',
-                    hideAfter: false,
-                    bgColor: '#000'
-                });
-
-                $.ajax({
-                    type: "POST",
-                    url: href,
-                    data: new FormData(this),
-                    dataType: "json",
-                    processData: false,
-                    contentType: false,
-                    complete: function () {
-                        // REQUIRED FOR LOADER
-                        // Remove loader svg and revert old button text.
-                        button.html(buttonText);
-                        button.prop('disabled', false);
-                    },
-                    success: function (response) {
-                        if (response.status == "success") {
-                            button.html("Submitted");
-                            myToast.update({
-                                text: "Your Message has been Recieved!",
-                                bgColor: '#202020'
-                            });
-                        }
-                        else if (response.code === 422) {
-                            myToast.update({
-                                text: "Field Validation Failed: Please fill all the fields in right format",
-                                bgColor: '#DF1C41'
-                            });
-                            $.each(response.errors, function (key) {
-                                $('[name="' + key + '"]').addClass('formcarry-field-error');
-                            });
-                        }
-                        else {
-                            var name = document.querySelector("#fc-generated-1-name").value,
-                                msg = document.querySelector("#fc-generated-1-message").value,
-                                subject = "Mail from " + name + " via Portfolio";
-                            window.location.href = "mailto:itsamaan.warsi@gmail.com?subject=" + subject + "&body=" + msg;
-                        }
-                    },
-                    error: function (jqXHR, textStatus) {
-                        const errorObject = jqXHR.responseJSON
-                        myToast.update({
-                            text: errorObject.title + ": " + errorObject.message,
-                            bgColor: '#DF1C41'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 
 </html>
