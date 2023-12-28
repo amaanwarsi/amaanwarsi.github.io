@@ -538,28 +538,28 @@ header {
 }
 
 #image1 {
-    background-image: url(/assets/images/programming-7327552_1280.png);
+    background-image: url(/assets/images/programming-7327552_1280.webp);
 }
 
 #image2 {
-    background-image: url(/assets/images/weblaptop.png);
+    background-image: url(/assets/images/weblaptop.webp);
 }
 
 #image3 {
-    background-image: url(/assets/images/serverdb.png);
+    background-image: url(/assets/images/serverdb.webp);
 }
 
 
 #testinomials-1 {
-    background-image: url(/assets/images/testinomials/pehalwanchicken.jpg);
+    background-image: url(/assets/images/testinomials/pehalwanchicken.webp);
 }
 
 #testinomials-2 {
-    background-image: url(/assets/images/testinomials/shoaibestates.jpg);
+    background-image: url(/assets/images/testinomials/shoaibestates.webp);
 }
 
 #testinomials-3 {
-    background-image: url(/assets/images/testinomials/starinstitute.png);
+    background-image: url(/assets/images/testinomials/starinstitute.webp);
 }
 
 .card-content {
@@ -736,11 +736,11 @@ header {
 }
 
 .parallax-1 {
-    background-image: url(/assets/images/6823050_2448.jpg);
+    background-image: url(/assets/images/6823050_2448.webp);
 }
 
 .parallax-2 {
-    background-image: url("./assets/images/paper-3225109_1280.jpg");
+    background-image: url("./assets/images/paper-3225109_1280.webp");
 }
 
 .parallax p {
