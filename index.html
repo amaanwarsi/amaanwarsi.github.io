@@ -12,7 +12,7 @@
     <meta name="keywords"
         content="amaan warsi, mr. amaan warsi, aman warsi, aaman warsi, warsi,  aman warshi, amaan warsi website, web developer, freelancer, amaan warsi personal site, personal portfolio website, personal portfolio website templates, personal portfolio website github, personal portfolio website using html and css, personal portfolio website templates free, personal portfolio source code, personal portfolio github, personal portfolio website design">
     <meta name="robots" content="index,follow">
-    <link rel="shortcut icon" href="logo.webp" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/images/logo.webp" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -86,7 +86,7 @@
                 data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large"
                 aria-label="Follow @amaanwarsi on GitHub">Follow @amaanwarsi</a>
         </div>
-        <a href="#" class="toggle-menu hide-lg"><i class="fas fa-bars"></i></a>
+        <a href="#" title="Menu" class="toggle-menu hide-lg"><i class="fas fa-bars"></i></a>
     </header>
 
     <!-- nav ends -->
@@ -184,7 +184,7 @@
                             <br>
                             <strong>Specialities:</strong>
 
-                            <a id="readmoreLink" title="Read More" onclick="readMore()">Read More</a>
+                            <a id="readmoreLink" title="Read More" onclick="readMore()" href="#!">Read More</a>
                         <div class="hide" id="readmore">
                             <ul>
                                 <li> <u>Frontend:</u> HTML, CSS, JavaScript, React.js</li>
@@ -192,13 +192,11 @@
                                 <li> <u>Databases:</u> MySQL, NoSQL, SQLite </li>
                                 <li> <u>Programming Languages:</u> Python, Java</li>
                                 <li> <u>Version Control:</u> Git </li>
-                                <a title="Read Less" onclick="readMore()">See
+                                <a title="Read Less" onclick="readMore()"  href="#!">See
                                     less</a>
                             </ul>
                         </div>
                         </p>
-
-
                         <a href="assets/docs/Amaan Warsi.pdf" aria-label="Resume" target="_blank" type="button"
                             class="btn" title="Resume">Download Resume</a>
                     </div>
@@ -214,7 +212,7 @@
         <section class="parallax parallax-1 small-section d-flex align-items-center justify-center flex-column">
             <h3>Let's have a convo!</h3>
             <p>Spark a conversation in just 30 seconds—fill out the contact form and let the connection begin!</p>
-            <a href="#contact" type="button" class="btn">start convo</a>
+            <a href="#contact" type="button" aria-label="Contact" class="btn">start convo</a>
         </section>
         <!-- message ends -->
 
@@ -445,10 +443,10 @@
             </div>
 
             <ul>
-                <li><a href="#home">home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">skills</a></li>
-                <li><a href="#testinomials">testinomials</a></li>
+                <li><a href="#home" aria-label="Home">home</a></li>
+                <li><a href="#about" aria-label="About">About</a></li>
+                <li><a href="#skills" aria-label="Skills">skills</a></li>
+                <li><a href="#testinomials" aria-label="Testinomials">testinomials</a></li>               
             </ul>
 
 
