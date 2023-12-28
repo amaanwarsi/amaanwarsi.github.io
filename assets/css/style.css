@@ -739,10 +739,6 @@ header {
     background-image: url(/assets/images/6823050_2448.webp);
 }
 
-.parallax-2 {
-    background-image: url("./assets/images/paper-3225109_1280.webp");
-}
-
 .parallax p {
     color: var(--primary-color);
 }
