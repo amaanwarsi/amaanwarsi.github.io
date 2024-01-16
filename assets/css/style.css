@@ -6,7 +6,7 @@ html {line-height: 1.15;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {d
 :root {
     --primary-color: #fff;
     --secondary-color: #121212;
-    --tertiary-color: #0F853A;
+    --tertiary-color: #1eb955;
     --fourth-color: #6c707a;
     --fifth-color: #4e148c;
     --blue-color: #4C40F7;
@@ -58,15 +58,36 @@ body {
     background: #555;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 500;
+
+h1 {
+    font-size: 3.8rem;
+    line-height: 4rem;
 }
 
+h2 {
+    font-size: 3rem;
+    line-height: 4rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+    line-height: 4rem;
+}
+
+h4 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+}
+
+h5 {
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+h6 {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
 a {
     text-decoration: none;
     color: var(--fifth-color);
@@ -235,6 +256,12 @@ a:hover {
     transition: .3s ease-in-out;
 }
 
+.container {
+    width: 88%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 .sticky {
     position: fixed;
     top: 0;
@@ -329,6 +356,12 @@ header {
     letter-spacing: 2px;
 }
 
+.hero h1,
+.hero h2,
+.hero h3{
+    font-weight: normal;
+}
+
 #data {
     position: absolute;
     bottom: 3rem;
@@ -373,15 +406,16 @@ header {
 .social a svg:hover {
     stroke: var(--primary-color);
 }
-
+/* 
 .small-section {
     margin: 0;
     width: 100vw;
+    min-height: 65vh;
     color: var(--primary-color);
     background-color: var(--secondary-color);
-    text-align: center;
+    text-align: left;
     gap: 2.3rem;
-    padding: 4.5rem;
+    padding: 4rem;
     letter-spacing: 2px;
     line-height: 1.5;
     margin-bottom: 4rem;
@@ -410,14 +444,53 @@ header {
 }
 
 .small-section .btn {
-    width: 18%;
-    background: #0f8a3c;
+    min-width: 18%;
+    text-align: right;
 }
 
 .small-section a {
     color: var(--primary-color);
+} */
+.small-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    background: var(--tertiary-color);
 }
 
+.small-section .content {
+    padding: 6rem 0;
+}
+
+.small-section h6{
+    color: #1a1a1a;
+}
+
+.small-section h6,
+.small-section h2,
+.small-section p {
+    color: #fff;
+    text-shadow: 0px 1px 1px rgba(0,0,0,0.5);
+    letter-spacing: 2.5px;
+}
+
+.small-section h2 {
+    margin: 1.5rem 0;
+}
+
+.small-section p {
+    line-height: 1.6;
+    letter-spacing: .5px;
+    font-size: 1.7rem;
+}
+
+.small-section .links {
+    float: right;
+    margin-top: 2rem;
+}
 .heading {
     color: var(--secondary-color);
     border-bottom: 2px solid var(--tertiary-color);
@@ -628,6 +701,7 @@ header {
 #contact.card {
     padding-left: 4rem;
     padding-right: 7rem;
+    margin: 2rem auto;
 }
 
 #contact .section-content {
