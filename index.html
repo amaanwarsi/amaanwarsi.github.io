@@ -19,7 +19,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,600;0,700;1,40&display=swap"
         rel="stylesheet">
-    <link rel='stylesheet' href='https://unpkg.com/emoji.css/dist/emoji.min.css'>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -75,16 +74,23 @@
                 <li><a href="#skills" aria-label="Skills">skills</a></li>
                 <li><a href="#testinomials" aria-label="Testinomials">testinomials</a></li>
                 <li><a href="#contact" aria-label="Contact">contact</a></li>
-                <li class="hide-lg"><a class="github-button" href="https://github.com/amaanwarsi"
-                        data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large"
-                        aria-label="Follow @amaanwarsi on GitHub">Follow @amaanwarsi</a></li>
+                <li class="hide-lg">
+                    <a href="#!" id="toggleTheme" type="button">
+                        Toggle Theme
+                    </a>
+                </li>
             </ul>
         </nav>
         <div class="hide-md d-flex justify-space-between align-items-center">
-            <!-- Place this tag where you want the button to render. -->
-            <a class="github-button" href="https://github.com/amaanwarsi"
-                data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large"
-                aria-label="Follow @amaanwarsi on GitHub">Follow @amaanwarsi</a>
+            <a href="#!" id="toggleTheme2" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" class="svg-path" width="30" height="30" viewBox="0 0 24 24"
+                    stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+                    <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" />
+                    <path d="M19 11h2m-1 -1v2" />
+                </svg>
+            </a>
         </div>
         <a href="#" title="Menu" class="toggle-menu hide-lg"><i class="fas fa-bars"></i></a>
     </header>
@@ -105,9 +111,9 @@
             <div id="data" class="card d-flex align-items-center justify-space-around flex-row">
                 <div class="data-content">
                     <div class="left">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-discount-check"
-                            width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f5f5f5" fill="none"
-                            stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="#f5f5f5" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <path
                                 d="M5 7.2a2.2 2.2 0 0 1 2.2 -2.2h1a2.2 2.2 0 0 0 1.55 -.64l.7 -.7a2.2 2.2 0 0 1 3.12 0l.7 .7c.412 .41 .97 .64 1.55 .64h1a2.2 2.2 0 0 1 2.2 2.2v1c0 .58 .23 1.138 .64 1.55l.7 .7a2.2 2.2 0 0 1 0 3.12l-.7 .7a2.2 2.2 0 0 0 -.64 1.55v1a2.2 2.2 0 0 1 -2.2 2.2h-1a2.2 2.2 0 0 0 -1.55 .64l-.7 .7a2.2 2.2 0 0 1 -3.12 0l-.7 -.7a2.2 2.2 0 0 0 -1.55 -.64h-1a2.2 2.2 0 0 1 -2.2 -2.2v-1a2.2 2.2 0 0 0 -.64 -1.55l-.7 -.7a2.2 2.2 0 0 1 0 -3.12l.7 -.7a2.2 2.2 0 0 0 .64 -1.55v-1" />
@@ -122,9 +128,9 @@
                 </div>
                 <div class="data-content">
                     <div class="left">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-checklist"
-                            width="50" height="50" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f5f5f5" fill="none"
-                            stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="#f5f5f5" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <path d="M9.615 20h-2.615a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8" />
                             <path d="M14 19l2 2l4 -4" />
@@ -139,9 +145,9 @@
                 </div>
                 <div class="data-content">
                     <div class="left">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-24-hours" width="52"
-                            height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f5f5f5" fill="none"
-                            stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="#f5f5f5" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <path d="M4 13c.325 2.532 1.881 4.781 4 6" />
                             <path d="M20 11a8.1 8.1 0 0 0 -15.5 -2" />
@@ -208,12 +214,23 @@
             </div>
         </section>
         <!-- about ends -->
-
         <!-- message starts -->
-        <section class="parallax parallax-1 small-section d-flex align-items-center justify-center flex-column">
-            <h3>Let's have a convo!</h3>
-            <p>Spark a conversation in just 30 seconds—fill out the contact form and let the connection begin!</p>
-            <a href="#contact" type="button" aria-label="Contact" class="btn">start convo</a>
+
+        <section class="small-section">
+            <div class="content">
+                <div class="container">
+                    <h6>Talk</h6>
+                    <h2>Let's have a convo!</h2>
+                    <p>Throughout my journey in web development, I've had the privilege of working on diverse projects
+                        that have honed my skills and expanded my horizons. From crafting intuitive user interfaces to
+                        implementing robust backend systems, my experiences have equipped me with a well-rounded
+                        understanding of the intricacies of web development.</p>
+
+                    <div class="links">
+                        <a href="#contact" class="btn" aria-label="Contact">start convo</a>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- message ends -->
 
@@ -386,12 +403,11 @@
                 <h2>Amaan <span class="colored-span">Warsi</span></h2>
             </div>
             <ul>
-                <li><b>Credit:</b></li>
-                <li><a
-                        href="https://www.freepik.com/free-vector/ice-rink-night-empty-public-place-skating_6823050.htm#query=parallax%20background&position=28&from_view=keyword&track=ais">Parallax
-                        Image by vectorpouch on Freepik</a></li>
+                <li><a href="#home" aria-label="Home">home</a></li>
+                <li><a href="#about" aria-label="About">About</a></li>
+                <li><a href="#skills" aria-label="Skills">skills</a></li>
+                <li><a href="#testinomials" aria-label="Testinomials">testinomials</a></li>
             </ul>
-
             <div class="">
                 <div class="social">
                     <a href="https://www.facebook.com/its.amaanwarsi">
@@ -446,19 +462,12 @@
                 </div>
             </div>
 
-            <ul>
-                <li><a href="#home" aria-label="Home">home</a></li>
-                <li><a href="#about" aria-label="About">About</a></li>
-                <li><a href="#skills" aria-label="Skills">skills</a></li>
-                <li><a href="#testinomials" aria-label="Testinomials">testinomials</a></li>
-            </ul>
-
 
         </div>
-
+        <!-- 
         <div class="footer-end d-flex justify-space-around align-items-center">
             <p>Design by Amaan Warsi</p>
-        </div>
+        </div> -->
     </footer>
     <!-- footer ends -->
 

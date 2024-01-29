@@ -3,6 +3,38 @@ const nav_header = document.querySelector("header");
 const menu_icon = mobile_nav.querySelector("i");
 const nav_links = document.querySelectorAll(".nav ul li a");
 
+
+// Function to set the theme based on OS preference
+function setOSPreferredTheme() {
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  document.body.classList.toggle('dark', prefersDark);
+}
+
+// Function to toggle between light and dark themes
+function toggleTheme() {
+  document.body.classList.toggle('dark');
+  const isDarkTheme = document.body.classList.contains('dark');
+  localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
+
+  // Update SVG stroke color based on theme
+  document.querySelector('.svg-path').style.stroke = isDarkTheme ? '#ffffff' : '#000000';
+}
+
+// Event listener for theme toggle button
+document.getElementById('toggleTheme').addEventListener('click', toggleTheme);
+document.getElementById('toggleTheme2').addEventListener('click', toggleTheme);
+
+// Check for saved theme in localStorage and apply it
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  document.body.classList.toggle('dark', savedTheme === 'dark');
+  // Update SVG stroke color based on saved theme
+  document.querySelector('.svg-path').style.stroke = savedTheme === 'dark' ? '#ffffff' : '#000000';
+} else {
+  // If no saved theme, set based on OS preference
+  setOSPreferredTheme();
+}
+
 const toggleNavbar = () => {
   nav_header.classList.toggle("active");
   menu_icon.classList.toggle("fa-times");
@@ -41,10 +73,6 @@ const readMore = () => {
 };
 
 AOS.init();
-
-/* document.querySelector("#themeSwitch").addEventListener("click", () => {
-  document.querySelector("body").classList.toggle("dark");
-}) */
 
 const counters = document.querySelectorAll(".count-value");
 const speed = 100;
