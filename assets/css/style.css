@@ -666,56 +666,6 @@ header {
     stroke: var(--primary-color);
 }
 
-.social a svg:hover {
-    stroke: var(--primary-color);
-}
-
-/* 
-.small-section {
-    margin: 0;
-    width: 100vw;
-    min-height: 65vh;
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
-    text-align: left;
-    gap: 2.3rem;
-    padding: 4rem;
-    letter-spacing: 2px;
-    line-height: 1.5;
-    margin-bottom: 4rem;
-}
-
-.small-section h3>span {
-    padding: .5rem;
-    background-color: var(--fifth-color);
-}
-
-.small-section h3 {
-    font-size: 3rem;
-    font-weight: 700;
-    width: 100%;
-    text-shadow: 1.2px 1px 0px var(--secondary-color);
-}
-
-.small-section p {
-    font-size: 1.8rem;
-    padding: .5rem;
-    color: var(--whitesmoke-color);
-}
-
-.small-section h3 {
-    text-transform: uppercase;
-}
-
-.small-section .btn {
-    min-width: 18%;
-    text-align: right;
-}
-
-.small-section a {
-    color: var(--primary-color);
-} */
-
 .small-section {
     position: relative;
     display: flex;
@@ -1131,6 +1081,7 @@ header {
 /*=====  End of Fields  ======*/
 
 
+/*
 .parallax {
     min-height: 50rem;
     background-attachment: fixed;
@@ -1146,7 +1097,7 @@ header {
 .parallax p {
     color: var(--primary-color);
 }
-
+*/
 
 @keyframes animate {
     0% {
@@ -1318,7 +1269,6 @@ header {
 
 footer {
     margin-top: 4rem;
-    /* background: var(--primary-color); */
     background: #1a1a1a;
     color: var(--whitesmoke-color);
     font-size: 1.7rem;
@@ -1376,6 +1326,10 @@ footer a {
     line-height: 1.6;
     letter-spacing: .7px;
     margin-bottom: .5rem;
+}
+
+.social a svg:hover {
+    stroke: #fff;
 }
 
 .social svg {
