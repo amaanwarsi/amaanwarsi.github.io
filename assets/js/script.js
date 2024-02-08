@@ -99,7 +99,7 @@ var swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
   loop: true,
   keyboard: {
-    enabled: true,
+    enabled: true
   },
   autoplay: {
     delay: 2500,
@@ -112,27 +112,24 @@ var swiper = new Swiper(".mySwiper", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
-  },
+  }
 });
-
-var swiper_skills = new Swiper(".mySwiper-skills", {
+var swiper = new Swiper(".mySwiper-projects", {
   slidesPerView: 3,
-  rewind: true,
-  grabCursor: true,
-  keyboard: {
-    enabled: true,
-  },
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  navigation: {
-    navigationHide: "true",
-  },
+  spaceBetween: 30,
+  freeMode: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
+  loop: true,
+  keyboard: {
+    enabled: true
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  }
 });
 
 $(function () {
