@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: #fff;
+            font-family: "Lora", serif;
+            color: #990000;
+
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin: 0 auto;
+            width: 90%;
+            max-width: 800px;
+            height: 100vh;
+            line-height: 1.7;
+            font-size: 1.8rem;
+        }
+
+        .reminder-text {
+            font-size: 1.5rem;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #121212;
+            margin-bottom: 4rem;
+        }
+
+        .qoute{
+            position: absolute;
+            bottom: 0;
+            font-size: 1rem;
+            letter-spacing: .6px;
+            line-height: 1.8;
+            color: #2E2E2E;
+            text-align: center;
+        }        
+
+        .reference{
+            margin-top: 1.5rem;
+            color: #595959;
+        }
+
+        .content{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>ALLAH </h2>
+        <span class="reminder-text">Is Watching You!</span>
+        <div class="qoute">
+            <div class="content" id="1">
+                <p>Narrated Abu Huraira: Allah's Messenger (ﷺ) said, "The strong is not the one who overcomes the people by his strength, but the strong is the one who controls himself while in anger."</p>
+                <p class="reference">Sahih al-Bukhari 6114</p>
+            </div>
+            <div class="content" id="2">
+                <p>Abdullah bin 'Umar (May allah be pleased with them) reported: Messenger of Allah (ﷺ) took hold of my shoulders and said, "Be in the world like a stranger or a wayfarer".</p>
+                <p class="reference">Sahih al-Bukhari 6416, Riyad as-Salihin 470</p>
+            </div>
+            <div class="content" id="3">
+                <p>Narrated by Abu Huraira, Prophet Muhammad (peace be upon him) said: "Beware! There is a piece of flesh in the body, and if it becomes good (reformed), the whole body becomes good; but if it becomes corrupt, the whole body becomes corrupt. That piece of flesh is the heart."</p>
+                <p class="reference">Sahih al-Bukhari 52</p>
+            </div>
+            <div class="content" id="4">
+                <p>It is narrated on the authority of 'Abdullah that the Messenger of Allah (ﷺ) observed: He who has in his heart the weight of a mustard seed of pride shall not enter Paradise.</p>
+                <p class="reference">Sahih Muslim 91c</p>
+            </div>
+            <div class="content" id="5">
+                <p>Abu Hurairah narrated that: the Messenger of Allah said: “Verily, when the slave (of Allah) commits a sin, a black spot appears on his heart. When he refrains from it, seeks forgiveness and repents, his heart is polished clean. But if he returns, it increases until it covers his entire heart."</p>
+                <p class="reference">Jami` at-Tirmidhi 3334</p>
+            </div>
+            <div class="content" id="6">
+                <p>Abu Huraira reported: The Messenger of Allah, peace and blessings be upon him, said, “Look at those below you and do not look at those above you, lest you belittle the favors of Allah.”</p>
+                <p class="reference">Sahih Muslim 2963c</p>
+            </div>
+            <div class="content" id="7">
+                <p>Ibn 'Umar (May Allah be pleased with them) used to say: "When you survive till the evening, do not expect to live until the morning; and when you survive until the morning, do not expect to live until the evening; (do good deeds) when you are in good health before you fall sick, and (do good deeds) as long as you are alive before death strikes".</p>
+                <p class="reference">Sahih al-Bukhari 6416, Riyad as-Salihin 470</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        let number = Math.floor(Math.random() * 7) + 1;
+        document.getElementById(number).style.display="block";
+    </script>
+</body>
+
+</html>
