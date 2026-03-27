@@ -4,6 +4,31 @@ const menu_icon = mobile_nav.querySelector("i");
 const nav_links = document.querySelectorAll(".nav ul li a");
 
 
+const modal = document.getElementById("newSiteModal");
+  const closeBtn = document.getElementById("closeModal");
+
+  // show only once
+  window.addEventListener("load", () => {
+    const seen = localStorage.getItem("seen-new-site");
+
+    if (!seen) {
+      setTimeout(() => {
+        modal.classList.remove("hidden");
+      }, 1000); // delay for smooth UX
+    }
+  });
+
+  // close modal
+  function closeModal() {
+    modal.classList.add("hidden");
+    localStorage.setItem("seen-new-site", "true");
+  }
+
+  closeBtn.addEventListener("click", closeModal);
+
+  // close on backdrop click
+  modal.querySelector(".modal-backdrop").addEventListener("click", closeModal);
+
 // Function to set the theme based on OS preference
 function setOSPreferredTheme() {
   const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
