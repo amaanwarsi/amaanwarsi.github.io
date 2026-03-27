@@ -22,7 +22,7 @@
     <meta name="robots" content="index,follow">
     <meta name="google-site-verification" content="pkpr4JpqcEbopxgcnEa31BDWuZXokn8UbR1cSLdfjGk" />
     <link rel="shortcut icon" href="/assets/images/logo.webp" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=1774609960">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -94,13 +94,24 @@
 </head>
 
 <body>
-    <!-- announcement banner starts -->
-    <div id="banner">
-      🚀 New portfolio is live!
-      <a href="https://amaanwarsi.tech">View now →</a>
-      <span onclick="document.getElementById('banner').style.display='none'">✕</span>
+    <!-- modal banner starts -->
+    <div id="newSiteModal" class="modal hidden">
+      <div class="modal-backdrop"></div>
+
+      <div class="modal-box">
+        <h3>🚀 New Portfolio is Live</h3>
+        <p>Experience the redesigned version with better performance and UI.</p>
+
+        <div class="modal-actions">
+          <a href="https://amaanwarsi.tech" target="_blank" rel="noopener noreferrer">
+            View Now →
+          </a>
+
+          <button id="closeModal">Maybe later</button>
+        </div>
+      </div>
     </div>
-    <!-- announcement banner ends -->
+    <!-- modal banner ends -->
     <!-- nav starts -->
     <header class="d-flex justify-space-between align-items-center">
         <a href="#home" aria-label="Home"><img src="./assets/images/logo.webp" alt="Logo" class="rotate-animation logo"
