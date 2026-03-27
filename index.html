@@ -40,38 +40,78 @@
 
     <!-- Schema.org Person JSON-LD Script -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "#Person",
-        "url": "https://amaanwarsi.thedev.id/",
-        "name": "Amaan Warsi",
-        "description": "Passionate software developer with expertise in web development. Amaan Warsi is known for his creativity and problem-solving skills. He is dedicated to creating innovative and user-friendly applications.",
-        "image": "https://amaanwarsi.thedev.id/assets/images/amaanwarsi.jpg",
-        "email": "its.amaanwarsi@gmail.com",
-        "sameAs": [
-            "https://www.facebook.com/its.amaanwarsi",
-            "https://youtube.com/@amaanwarsiii",
-            "https://www.instagram.com/amaanibnsuhail/",
-            "https://www.linkedin.com/in/amaanwarsi/",
-            "https://github.com/amaanwarsi"
-        ],
-        "jobTitle": "Web Developer",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Moradabad",
-            "addressRegion": "UP",
-            "postalCode": "244001",
-            "addressCountry": "India"
-        },
-        "gender": "Male",
-        "nationality": "Indian"
+   {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://amaanwarsi.thedev.id/#website",
+    "url": "https://amaanwarsi.thedev.id/",
+    "name": "Amaan Warsi Portfolio",
+    "inLanguage": "en",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "@id": "https://amaanwarsi.thedev.id/#webpage",
+    "url": "https://amaanwarsi.thedev.id/",
+    "name": "Amaan Warsi - Software Engineer",
+    "isPartOf": {
+      "@id": "https://amaanwarsi.thedev.id/#website"
+    },
+    "mainEntity": {
+      "@type": "Person",
+      "@id": "https://amaanwarsi.thedev.id/#person",
+      "name": "Amaan Warsi",
+      "url": "https://amaanwarsi.thedev.id/",
+      "image": "https://amaanwarsi.thedev.id/assets/images/amaanwarsi.jpg",
+      "email": "mailto:its.amaanwarsi@gmail.com",
+      "jobTitle": "Software Engineer",
+      "description": "Software Engineer building scalable SaaS, mobile apps, and modern web experiences.",
+      "sameAs": [
+        "https://www.linkedin.com/in/amaanwarsi/",
+        "https://github.com/amaanwarsi",
+        "https://www.instagram.com/amaanibnsuhail/",
+        "https://youtube.com/@amaanwarsiii",
+        "https://www.facebook.com/its.amaanwarsi"
+      ],
+      "knowsAbout": [
+        "Full-Stack Development",
+        "React",
+        "Node.js",
+        "Mobile Apps",
+        "SaaS",
+        "System Design"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Moradabad",
+        "addressRegion": "UP",
+        "postalCode": "244001",
+        "addressCountry": "IN"
+      }
     }
+  }
 </script>
 </head>
 
 <body>
-
+<div id="banner" style="
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  z-index: 9999;
+  font-family: sans-serif;
+">
+  🚀 New portfolio is live!
+  <a href="https://amaanwarsi.tech" style="color:#4ade80; margin-left:10px;">
+    View now →
+  </a>
+  <span onclick="document.getElementById('banner').style.display='none'"
+        style="margin-left:15px; cursor:pointer;">✕</span>
+</div>
     <!-- nav starts -->
     <header class="d-flex justify-space-between align-items-center">
         <a href="#home" aria-label="Home"><img src="./assets/images/logo.webp" alt="Logo" class="rotate-animation logo"
