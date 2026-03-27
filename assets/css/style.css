@@ -523,10 +523,62 @@ body.dark .svg-path {
     width: 100%;
 }
 
+#banner {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 98%;
+  height: 4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+
+  color: var(--secondary-color);
+
+  /* glass effect like navbar */
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  z-index: 999; /* ABOVE navbar */
+}
+
+/* link styling */
+#banner a {
+  color: var(--tertiary-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#banner a:hover {
+  text-decoration: underline;
+}
+
+/* close button */
+#banner span {
+  cursor: pointer;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+#banner span:hover {
+  opacity: 1;
+}
 
 .sticky {
     position: fixed;
-    top: 0;
+    top: 4.5rem;
     left: 50%;
     transform: translate(-50%, 15%);
     height: 6.5rem;
