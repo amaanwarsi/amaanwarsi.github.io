@@ -9,7 +9,7 @@ export function Footer() {
         <div className="flex gap-6">
           <a href="https://github.com/amaanwarsi" target="_blank" className="hover:text-accent transition-colors font-mono">GitHub</a>
           <a href="https://linkedin.com/in/amaanwarsi" target="_blank" className="hover:text-accent transition-colors font-mono">LinkedIn</a>
-          <a href="https://x.com/amaanwarsi" target="_blank" className="hover:text-accent transition-colors font-mono">X (Twitter)</a>
+          <a href="https://x.com/itsamaanwarsi" target="_blank" className="hover:text-accent transition-colors font-mono">X (Twitter)</a>
         </div>
       </div>
       <Link href="/labs" className="group flex items-center gap-2 hover:text-accent transition-colors font-mono text-xs border border-border px-3 py-1.5 rounded-md hover:border-accent">

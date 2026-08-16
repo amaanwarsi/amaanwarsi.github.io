@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Amaan Warsi - Backend Engineer & Systems Builder",
   description: "I build resilient backend systems and full-stack products.",
   keywords: [
-    "amaan warsi", "mr. amaan warsi", "backend engineer", "systems builder", 
+    "amaan warsi", "mr. amaan warsi", "backend engineer", "systems builder",
     "web developer", "freelancer", "portfolio", "next.js"
   ],
   openGraph: {
@@ -51,7 +51,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         "name": "Amaan Warsi",
         "url": "https://amaanwarsi.thedev.id/",
         "image": "https://amaanwarsi.thedev.id/assets/images/amaanwarsi-1.jpg",
-        "email": "mailto:its.amaanwarsi@gmail.com",
         "jobTitle": "Backend Engineer & Systems Builder",
         "description": "I build resilient backend systems and full-stack products.",
         "sameAs": [
@@ -59,7 +58,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           "https://github.com/amaanwarsi",
           "https://www.instagram.com/amaanibnsuhail/",
           "https://youtube.com/@amaanwarsiii",
-          "https://www.facebook.com/its.amaanwarsi"
+          "https://www.facebook.com/its.amaanwarsi",
+          "https://x.com/itsamaanwarsi"
         ],
         "knowsAbout": [
           "Backend Engineering",
@@ -73,7 +73,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           "@type": "PostalAddress",
           "addressLocality": "Moradabad",
           "addressRegion": "UP",
-          "postalCode": "244001",
           "addressCountry": "IN"
         }
       }
