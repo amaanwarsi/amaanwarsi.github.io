@@ -18,7 +18,7 @@ export default function TerminalSimulator() {
         <div className="text-text-secondary">
           Welcome to AmaaNOS v1.0.0
           <br />
-          Type <span className="text-accent">'help'</span> to see available commands.
+          Type <span className="text-accent">&apos;help&apos;</span> to see available commands.
         </div>
       ),
     },
@@ -65,7 +65,7 @@ export default function TerminalSimulator() {
       case "about":
         output = (
           <div className="text-text-secondary">
-            Hello, I'm Amaan. Backend engineer, systems builder.
+            Hello, I&apos;m Amaan. Backend engineer, systems builder.
             <br />
             I build resilient backend architectures and full-stack products.
             <br />
@@ -147,9 +147,9 @@ export default function TerminalSimulator() {
         break;
       case "curl":
         if (!args[1]) {
-            output = <div className="text-red-400">curl: try 'curl --help' or 'curl --manual' for more information</div>;
+            output = <div className="text-red-400">curl: try &apos;curl --help&apos; or &apos;curl --manual&apos; for more information</div>;
         } else if (args[1].includes("amaanwarsi")) {
-            output = <div className="text-success">&lt;html&gt;&lt;body&gt;{"{"}"status": "hire me"{"}"}&lt;/body&gt;&lt;/html&gt;</div>;
+            output = <div className="text-success">&lt;html&gt;&lt;body&gt;{"{"}&quot;status&quot;: &quot;hire me&quot;{"}"}&lt;/body&gt;&lt;/html&gt;</div>;
         } else {
             output = <div className="text-text-secondary">curl: (6) Could not resolve host: {args[1]}</div>;
         }
@@ -185,7 +185,7 @@ export default function TerminalSimulator() {
         break;
       case "cat":
         if (args[1] === "about.txt") {
-            output = <div className="text-text-secondary">Hello, I'm Amaan. Backend engineer, systems builder.</div>;
+            output = <div className="text-text-secondary">Hello, I&apos;m Amaan. Backend engineer, systems builder.</div>;
         } else if (args[1] === "projects.json") {
             output = <div className="text-text-secondary">{`{ "featured": "ZaykaTap", "others": ["Ultron", "Imgx", "MPM", "Molt"] }`}</div>;
         } else if (args[1] === "contact.sh") {
@@ -195,10 +195,10 @@ export default function TerminalSimulator() {
         }
         break;
       case "cd":
-        output = <div className="text-text-secondary">cd: {args[1] || '~'}: No such file or directory (it's a fake shell!)</div>;
+        output = <div className="text-text-secondary">cd: {args[1] || '~'}: No such file or directory (it&apos;s a fake shell!)</div>;
         break;
       default:
-        output = <div className="text-red-400">Command not found: {baseCmd}. Type 'help' for a list of commands.</div>;
+        output = <div className="text-red-400">Command not found: {baseCmd}. Type &apos;help&apos; for a list of commands.</div>;
     }
 
     setHistory([...newHistory, { id: Math.random().toString(36).substring(7), type: "output", content: output }]);

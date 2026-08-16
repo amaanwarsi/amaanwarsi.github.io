@@ -9,7 +9,7 @@ export function EndOfDemo({ projectName }: EndOfDemoProps) {
   return (
     <div className="flex flex-col items-center justify-center py-16 px-4 space-y-3 border border-border border-dashed rounded-xl bg-gradient-to-b from-transparent to-bg-raised/50 mt-16 text-center">
       <span className="text-3xl mb-2">🏁</span>
-      <h3 className="text-lg font-medium text-text-primary">You've reached the end</h3>
+      <h3 className="text-lg font-medium text-text-primary">You&apos;ve reached the end</h3>
       <p className="text-text-secondary text-sm max-w-sm leading-relaxed">
         Thanks for checking out {projectName ? `the ${projectName} case study` : "this case study"}.
       </p>

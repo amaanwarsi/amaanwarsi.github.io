@@ -14,7 +14,7 @@ const notesData: Record<string, { title: string; description: string; date: stri
       <>
         <p>When building a real-time system—like sending an incoming order straight to a busy kitchen display—you have two main choices: HTTP Polling or WebSockets.</p>
 
-        <p>Initially, polling seems like the easiest path. The kitchen app just asks the server, <em>"Any new orders?"</em> every 3 seconds. But at scale, this turns into a performance disaster. If you have 500 restaurants online, that's 10,000 requests per minute slamming your database just to find out absolutely nothing has happened.</p>
+        <p>Initially, polling seems like the easiest path. The kitchen app just asks the server, <em>&quot;Any new orders?&quot;</em> every 3 seconds. But at scale, this turns into a performance disaster. If you have 500 restaurants online, that&apos;s 10,000 requests per minute slamming your database just to find out absolutely nothing has happened.</p>
 
         <p>By moving to a WebSockets approach paired with Redis, we completely flipped the model. Instead of the clients repeatedly asking for data, the server holds a lightweight, persistent connection and pushes the data the exact millisecond an order arrives.</p>
 
@@ -30,7 +30,7 @@ const notesData: Record<string, { title: string; description: string; date: stri
           </pre>
         </div>
 
-        <p>Here's how it flows: When a customer places an order via the API, the API writes it to the database just once, and immediately publishes an event to Redis. Our Node.js WebSocket server—which is subscribed to Redis—receives that event and pushes it only to the specific restaurant's connected device.</p>
+        <p>Here&apos;s how it flows: When a customer places an order via the API, the API writes it to the database just once, and immediately publishes an event to Redis. Our Node.js WebSocket server—which is subscribed to Redis—receives that event and pushes it only to the specific restaurant&apos;s connected device.</p>
 
         <p><strong>The result?</strong> We saw an 80-90% reduction in database I/O, and we could comfortably handle 5x more concurrent users on the exact same server hardware, all while achieving sub-50ms latency for order delivery.</p>
       </>
@@ -93,7 +93,7 @@ const notesData: Record<string, { title: string; description: string; date: stri
     tech: "Next.js · WebP · Virtualization",
     content: (
       <>
-        <p>In a hospitality setting, you can't assume your users are on a flagship phone with a 5G connection. A customer scanning a QR code for a menu might be on an older Android device with a spotty 3G signal. If the menu takes 10 seconds to load, or crashes their browser, you lose the order.</p>
+        <p>In a hospitality setting, you can&apos;t assume your users are on a flagship phone with a 5G connection. A customer scanning a QR code for a menu might be on an older Android device with a spotty 3G signal. If the menu takes 10 seconds to load, or crashes their browser, you lose the order.</p>
 
         <p>To hit a Time to Interactive (TTI) of <strong>&lt;1.5 seconds</strong> on 3G networks, I had to completely rethink how we handle assets and rendering.</p>
 
@@ -101,7 +101,7 @@ const notesData: Record<string, { title: string; description: string; date: stri
         <p>Instead of relying on the server to compress images, I implemented client-side image processing. Before any menu item photo is uploaded, it is automatically converted to WebP format and compressed directly in the browser. This achieved a <strong>70-80% decrease in data transfer</strong> and made visual rendering 3x faster by serving highly optimized assets from our static subdomain.</p>
 
         <h3 className="text-xl font-medium text-text-primary mt-8 mb-4">2. DOM Virtualization</h3>
-        <p>A menu with 500+ items and high-quality images will easily crash the browser on a low-end device due to memory over-allocation. To solve this, I implemented an "on-demand" loading strategy.</p>
+        <p>A menu with 500+ items and high-quality images will easily crash the browser on a low-end device due to memory over-allocation. To solve this, I implemented an &quot;on-demand&quot; loading strategy.</p>
 
         <div className="bg-bg-raised border border-border p-6 rounded-lg font-mono text-xs text-text-secondary overflow-x-auto my-6">
           <pre className="leading-relaxed text-accent-soft">
@@ -119,7 +119,7 @@ const notesData: Record<string, { title: string; description: string; date: stri
           </pre>
         </div>
 
-        <p>We prioritize rendering only the first 4-5 items instantly. Everything below the fold uses aggressive lazy-loading triggered by the user's scroll position. This single change resulted in a <strong>60-70% lower browser RAM footprint</strong>, keeping the interface buttery smooth and completely crash-free regardless of the menu size.</p>
+        <p>We prioritize rendering only the first 4-5 items instantly. Everything below the fold uses aggressive lazy-loading triggered by the user&apos;s scroll position. This single change resulted in a <strong>60-70% lower browser RAM footprint</strong>, keeping the interface buttery smooth and completely crash-free regardless of the menu size.</p>
       </>
     )
   }

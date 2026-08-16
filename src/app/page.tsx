@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { MouseEvent } from "react";
 import { cn } from "@/lib/utils";
-import { ArrowRight, ExternalLink, Terminal } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 
 function GlowCard({ children, href, className }: { children: React.ReactNode, href: string, className?: string }) {
   const mouseX = useMotionValue(0);
@@ -62,7 +62,7 @@ export default function Home() {
           className="space-y-8 relative"
         >
           <div className="inline-flex items-center gap-3 text-sm text-accent-soft font-mono mb-4">
-            <span>Hello, I'm Amaan.</span>
+            <span>Hello, I&apos;m Amaan.</span>
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight text-text-primary max-w-4xl leading-[1.1]">
             Backend engineer,<br />

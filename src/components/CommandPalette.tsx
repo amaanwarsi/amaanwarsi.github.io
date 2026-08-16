@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, FileText, Terminal, Code, BookOpen, Clock, MessageSquareQuote } from "lucide-react";
+import { Search, FileText, Terminal, Code, BookOpen, Clock } from "lucide-react";
 
 export function CommandPalette() {
   const [open, setOpen] = useState(false);
