@@ -64,10 +64,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         "knowsAbout": [
           "Backend Engineering",
           "System Design",
-          "Full-Stack Development",
-          "Node.js",
-          "React",
-          "Docker"
+          "Software Architecture",
+          "Distributed Systems",
+          "Scalable Systems",
+          "API Design",
+          "Systems Engineering",
+          "Product Development"
         ],
         "address": {
           "@type": "PostalAddress",
