@@ -125,6 +125,12 @@ const notesData: Record<string, { title: string; description: string; date: stri
   }
 };
 
+export function generateStaticParams() {
+  return Object.keys(notesData).map((slug) => ({
+    slug,
+  }));
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const note = notesData[slug];
