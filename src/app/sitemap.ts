@@ -3,21 +3,21 @@ import fs from 'fs'
 import path from 'path'
 
 export const dynamic = 'force-static'
- 
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://amaanwarsi.com' // Replace with your actual domain
-  
+  const baseUrl = 'https://amaanwarsi.thedev.id/'
+
   // Dynamically fetch all case studies from the work directory
   const workDir = path.join(process.cwd(), 'src/app/work')
   let workRoutes: MetadataRoute.Sitemap = []
-  
+
   try {
     if (fs.existsSync(workDir)) {
       const workProjects = fs.readdirSync(workDir).filter(file => {
         // Exclude Next.js specific files and ensure we're getting route directories
         return fs.statSync(path.join(workDir, file)).isDirectory() && !file.startsWith('[')
       })
-      
+
       workRoutes = workProjects.map(project => ({
         url: `${baseUrl}/work/${project}`,
         lastModified: new Date(),
@@ -28,7 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   } catch (error) {
     console.error('Error generating case studies for sitemap:', error)
   }
-  
+
   return [
     {
       url: `${baseUrl}`,
