@@ -23,7 +23,10 @@ export const metadata: Metadata = {
         url: "/assets/images/amaanwarsi-1.jpg",
       }
     ]
-  }
+  },
+  verification: {
+    google: "pkpr4JpqcEbopxgcnEa31BDWuZXokn8UbR1cSLdfjGk",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
