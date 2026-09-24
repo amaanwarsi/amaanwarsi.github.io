@@ -2,6 +2,8 @@ import { ImageResponse } from 'next/og'
 import { siteConfig } from '@/config/site'
 
 export const runtime = 'edge'
+export const dynamic = 'force-static'
+export const revalidate = false
 
 export const alt = 'Amaan Warsi — Product-Minded Engineer'
 export const size = {
