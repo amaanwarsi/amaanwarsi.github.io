@@ -18,8 +18,8 @@ const notesData: Record<string, { title: string; description: string; date: stri
 
         <p>By moving to a WebSockets approach paired with Redis, we completely flipped the model. Instead of the clients repeatedly asking for data, the server holds a lightweight, persistent connection and pushes the data the exact millisecond an order arrives.</p>
 
-        <div className="bg-surface border border-line p-6 rounded-lg font-mono text-xs text-earth/70 overflow-x-auto my-8">
-          <pre className="leading-relaxed text-charcoal">
+        <div className="bg-bg-raised border border-border p-6 rounded-lg font-mono text-xs text-text-secondary overflow-x-auto my-8">
+          <pre className="leading-relaxed text-accent-soft">
             {`          [ Old Way: Polling ]                  [ New Way: WebSockets + Redis ]
                                                   
  [ App ] ---? (Any orders?) ---> [ DB ]       [ App ] <---(Push)--- [ WebSocket ]
@@ -58,11 +58,11 @@ const notesData: Record<string, { title: string; description: string; date: stri
 
         <p>Routing all static assets through a dedicated <code>static</code> subdomain means that when traffic eventually scales, we can shift that entire subdomain behind a CDN with zero code changes.</p>
 
-        <h3 className="text-xl font-poppins font-medium text-charcoal tracking-[-0.015em] mt-8 mb-4">Atomic CI/CD Deployments</h3>
+        <h3 className="text-xl font-medium text-text-primary mt-8 mb-4">Atomic CI/CD Deployments</h3>
         <p>The biggest challenge of self-hosting is handling updates without kicking active users offline. I automated the entire deployment pipeline using GitHub Actions.</p>
 
-        <div className="bg-surface border border-line p-6 rounded-lg font-mono text-xs text-earth/70 overflow-x-auto my-6">
-          <pre className="leading-relaxed text-charcoal">
+        <div className="bg-bg-raised border border-border p-6 rounded-lg font-mono text-xs text-text-secondary overflow-x-auto my-6">
+          <pre className="leading-relaxed text-accent-soft">
             {`[ Developer ] --> (git push) --> [ GitHub Actions ]
                                        |
                                   (Build Image)
@@ -97,14 +97,14 @@ const notesData: Record<string, { title: string; description: string; date: stri
 
         <p>To hit a Time to Interactive (TTI) of <strong>&lt;1.5 seconds</strong> on 3G networks, I had to completely rethink how we handle assets and rendering.</p>
 
-        <h3 className="text-xl font-poppins font-medium text-charcoal tracking-[-0.015em] mt-8 mb-4">1. Client-Side Image Processing</h3>
+        <h3 className="text-xl font-medium text-text-primary mt-8 mb-4">1. Client-Side Image Processing</h3>
         <p>Instead of relying on the server to compress images, I implemented client-side image processing. Before any menu item photo is uploaded, it is automatically converted to WebP format and compressed directly in the browser. This achieved a <strong>70-80% decrease in data transfer</strong> and made visual rendering 3x faster by serving highly optimized assets from our static subdomain.</p>
 
-        <h3 className="text-xl font-poppins font-medium text-charcoal tracking-[-0.015em] mt-8 mb-4">2. DOM Virtualization</h3>
+        <h3 className="text-xl font-medium text-text-primary mt-8 mb-4">2. DOM Virtualization</h3>
         <p>A menu with 500+ items and high-quality images will easily crash the browser on a low-end device due to memory over-allocation. To solve this, I implemented an &quot;on-demand&quot; loading strategy.</p>
 
-        <div className="bg-surface border border-line p-6 rounded-lg font-mono text-xs text-earth/70 overflow-x-auto my-6">
-          <pre className="leading-relaxed text-charcoal">
+        <div className="bg-bg-raised border border-border p-6 rounded-lg font-mono text-xs text-text-secondary overflow-x-auto my-6">
+          <pre className="leading-relaxed text-accent-soft">
             {`[ Viewport Render Cycle ]
 
   +-----------------------+
@@ -157,42 +157,42 @@ export default async function NotePage({ params }: { params: Promise<{ slug: str
 
   if (!note) {
     return (
-      <main className="max-w-3xl mx-auto px-4 md:px-8 py-32 text-center reveal is-in">
-        <h1 className="text-3xl font-poppins font-medium text-charcoal mb-4 tracking-[-0.015em]">Note not found</h1>
-        <Link href="/#case-studies" className="text-accent hover:underline font-inter">Return to notes</Link>
+      <main className="max-w-3xl mx-auto px-4 md:px-8 py-32 text-center">
+        <h1 className="text-3xl font-medium text-text-primary mb-4">Note not found</h1>
+        <Link href="/#case-studies" className="text-accent hover:underline">Return to notes</Link>
       </main>
     );
   }
 
   return (
     <main className="max-w-3xl mx-auto px-4 md:px-8 py-16 md:py-24 space-y-12">
-      <Link href="/#case-studies" className="inline-flex items-center gap-2 text-sm text-earth/70 hover:text-charcoal transition-colors font-inter">
+      <Link href="/#case-studies" className="inline-flex items-center gap-2 text-sm text-text-muted hover:text-text-primary transition-colors">
         <ArrowLeft className="w-4 h-4" />
         Back to Home
       </Link>
 
       <article className="space-y-8">
-        <header className="space-y-4 pb-8 border-b border-line reveal is-in">
-          <div className="flex items-center gap-3 text-sm font-mono text-earth/60">
+        <header className="space-y-4 pb-8 border-b border-border">
+          <div className="flex items-center gap-3 text-sm font-mono text-accent-soft">
             <span>{note.category}</span>
             <span>•</span>
             <time dateTime={new Date(note.date).toISOString()}>{note.date}</time>
           </div>
-          <h1 className="text-3xl md:text-5xl font-poppins font-medium tracking-[-0.015em] text-charcoal">
+          <h1 className="text-3xl md:text-5xl font-medium tracking-tight text-text-primary">
             {note.title}
           </h1>
-          <p className="text-xl text-earth leading-relaxed font-inter font-light">
+          <p className="text-xl text-text-secondary leading-relaxed">
             {note.description}
           </p>
         </header>
 
-        <div className="prose prose-p:text-earth prose-p:leading-relaxed prose-p:font-inter prose-p:font-light prose-headings:font-poppins prose-headings:font-medium prose-headings:text-charcoal max-w-none whitespace-pre-wrap reveal is-in">
+        <div className="prose prose-invert prose-p:text-text-secondary prose-p:leading-relaxed prose-headings:text-text-primary max-w-none whitespace-pre-wrap">
           {note.content}
         </div>
 
-        <footer className="pt-8 border-t border-line reveal is-in">
-          <div className="text-sm font-mono text-earth/60">
-            Tech stack: <span className="text-charcoal">{note.tech}</span>
+        <footer className="pt-8 border-t border-border/50">
+          <div className="text-sm font-mono text-text-muted">
+            Tech stack: <span className="text-text-primary">{note.tech}</span>
           </div>
         </footer>
       </article>

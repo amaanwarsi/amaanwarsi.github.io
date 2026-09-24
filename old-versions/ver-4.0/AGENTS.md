@@ -50,18 +50,18 @@ When building or modifying UI pages, follow these strict design conventions to e
 
 ### 2. Layout & Colors
 
-- **Main Container**: Use `max-w-4xl` for the home page, and `max-w-3xl` for subpages to maintain a focused reading experience.
+- **Main Container**: Always wrap main page content in `<div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">`.
 - **Primary Colors**:
   - Backgrounds: Use `bg-white`, `.bg-surface`, `.bg-warm-gray`, `.bg-ivory`, `.bg-parchment`, `.bg-sage`, `.bg-mist`, or `.bg-sand`. Do not introduce new background hex codes.
   - Text: Use `text-charcoal` (`#0D0D0D`) for primary text, `text-earth` (`#222222`) for secondary text, and `text-accent` / `text-blue-500` for highlights.
 - **Cards**: Use `.card` for container blocks. It provides the white background, `border-line`, and `rounded-xl`.
-- **Footer**: Keep the footer minimal and light (`border-t border-line text-earth`). Do not use dark footer treatments.
+- **Footer**: Use `.footer-dark` (`#1C1917`) for the dark footer treatment.
 
 ### 3. Buttons & Interactive Elements
 
-- **Primary Button (`.btn-primary`)**: Blue CTA using `bg-accent text-white`, with a hover treatment (`hover:bg-blue-600`). Usually paired with a right-arrow SVG.
+- **Primary Button (`.btn-primary`)**: Dark CTA using `bg-charcoal text-white`, with the existing hover treatment. Usually paired with a right-arrow SVG.
 - **Secondary Button (`.btn-secondary`)**: Outlined alternative using `border-line-strong text-charcoal`, with the existing surface hover treatment.
-- **Chips (`.chip`)**: Use `bg-surface border-line rounded-full text-earth`; active/hover states use `bg-accent text-white`.
+- **Chips (`.chip`)**: Use `bg-surface border-line rounded-full text-earth`; active/hover states use `bg-charcoal text-white`.
 - **Navigation Links (`.nav-link`)**: Reuse the existing animated underline behavior.
 
 ### 4. Animations & Behaviors
@@ -122,7 +122,7 @@ Build these as sections on a single scrolling home page, with dedicated case-stu
 - Additional case studies as needed for freelance client projects (only include ones you have permission to show publicly)
 
 ### Other routes
-- **`/labs`** — experimental/fun builds and side projects. Deliberately not linked from the main nav — footer only. This is where personality goes so it never competes with the "hire me" read of the home page
+- **`/labs`** — the retro-OS-shell concept, or any experimental/fun build. Deliberately not linked from the main nav — footer only. This is where personality goes so it never competes with the "hire me" read of the home page
 - **`/resume.pdf`** — static asset, plus a `/resume` route that embeds or redirects to it
 - **`404`** — on-brand, minimal, one link home
 

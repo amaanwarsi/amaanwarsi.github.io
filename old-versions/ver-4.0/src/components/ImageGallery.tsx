@@ -44,7 +44,7 @@ export function ImageGallery({ images }: ImageGalleryProps) {
         {images.map((img, idx) => (
           <div
             key={img.src}
-            className={`img-wrap border border-line cursor-zoom-in group relative ${
+            className={`overflow-hidden rounded-xl border border-border bg-bg-raised cursor-zoom-in group relative ${
               idx === 0 ? "sm:col-span-2" : ""
             }`}
             onClick={() => setSelectedImage(img)}
@@ -54,9 +54,9 @@ export function ImageGallery({ images }: ImageGalleryProps) {
               alt={img.alt}
               width={idx === 0 ? 1200 : 800}
               height={idx === 0 ? 800 : 600}
-              className="w-full h-auto object-cover"
+              className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.02]"
             />
-            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 pointer-events-none" />
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 pointer-events-none" />
           </div>
         ))}
       </div>
@@ -89,7 +89,7 @@ export function ImageGallery({ images }: ImageGalleryProps) {
                 alt={selectedImage.alt}
                 width={1920}
                 height={1080}
-                className="w-auto h-auto max-w-full max-h-[90vh] object-contain rounded-xl border border-line"
+                className="w-auto h-auto max-w-full max-h-[90vh] object-contain rounded-xl shadow-2xl"
                 priority
               />
             </motion.div>

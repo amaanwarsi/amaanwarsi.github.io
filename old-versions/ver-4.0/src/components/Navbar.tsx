@@ -30,24 +30,24 @@ export function Navbar() {
       className={cn(
         "fixed top-0 inset-x-0 z-50 transition-all duration-300 border-b",
         scrolled
-          ? "bg-white/80 backdrop-blur-md border-line py-4"
+          ? "bg-bg-base/70 backdrop-blur-md border-border py-4 shadow-sm"
           : "bg-transparent border-transparent py-6"
       )}
     >
-      <div className="max-w-4xl mx-auto px-4 md:px-8 flex justify-between items-center">
-        <Link href="/" className="font-poppins font-medium text-lg text-charcoal tracking-[-0.015em]">
+      <div className="max-w-5xl mx-auto px-4 md:px-8 flex justify-between items-center">
+        <Link href="/" className="font-medium text-lg text-text-primary tracking-tight">
           Amaan Warsi
         </Link>
-        <nav className="flex gap-4 sm:gap-6 text-sm text-earth items-center">
-          <Link href="#work" className="nav-link hidden sm:block">Work</Link>
-          <Link href="#about" className="nav-link hidden sm:block">About</Link>
-          <Link href="#contact" className="nav-link hidden sm:block">Contact</Link>
+        <nav className="flex gap-4 sm:gap-6 text-sm text-text-secondary items-center">
+          <Link href="#work" className="hover:text-accent transition-colors hidden sm:block">Work</Link>
+          <Link href="#about" className="hover:text-accent transition-colors hidden sm:block">About</Link>
+          <Link href="#contact" className="hover:text-accent transition-colors hidden sm:block">Contact</Link>
           
           <button 
             onClick={triggerCommandPalette}
-            className="ml-0 sm:ml-4 px-2 py-1.5 bg-surface border border-line rounded-md text-xs font-mono text-earth hover:border-line-strong hover:text-charcoal transition-all flex items-center gap-1.5 group"
+            className="ml-0 sm:ml-4 px-2 py-1.5 bg-bg-raised/80 backdrop-blur-sm border border-border rounded-md text-xs font-mono text-text-muted hover:border-text-secondary hover:text-text-primary transition-all flex items-center gap-1.5 group shadow-sm"
           >
-            <Command className="w-3.5 h-3.5 group-hover:text-charcoal transition-colors" />
+            <Command className="w-3.5 h-3.5 group-hover:text-accent transition-colors" />
             <span className="hidden sm:inline-block">K</span>
           </button>
         </nav>
