@@ -40,12 +40,21 @@ export const metadata: Metadata = {
     title: "Amaan Warsi — Product-Minded Engineer",
     description: siteConfig.ogDescription,
     siteName: "Amaan Warsi Portfolio",
+    images: [
+      {
+        url: "/images/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Amaan Warsi — Product-Minded Engineer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Amaan Warsi — Product-Minded Engineer",
     description: siteConfig.ogDescription,
     creator: "@itsamaanwarsi",
+    images: ["/images/og.png"],
   },
   verification: {
     google: "pkpr4JpqcEbopxgcnEa31BDWuZXokn8UbR1cSLdfjGk",
@@ -81,7 +90,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         "@id": `${siteConfig.url}/#person`,
         "name": "Amaan Warsi",
         "url": `${siteConfig.url}/`,
-        "image": `${siteConfig.url}/opengraph-image`,
         "jobTitle": "Product-Minded Engineer",
         "description": siteConfig.description,
         "sameAs": Object.values(siteConfig.links),
