@@ -42,9 +42,10 @@ export function Navbar() {
           <Link href="#work" className="nav-link hidden sm:block">Work</Link>
           <Link href="#about" className="nav-link hidden sm:block">About</Link>
           <Link href="#contact" className="nav-link hidden sm:block">Contact</Link>
-          
-          <button 
+
+          <button
             onClick={triggerCommandPalette}
+            aria-label="Open Menu"
             className="ml-0 sm:ml-4 px-2 py-1.5 bg-surface border border-line rounded-md text-xs font-mono text-earth hover:border-line-strong hover:text-charcoal transition-all flex items-center gap-1.5 group"
           >
             <Command className="w-3.5 h-3.5 group-hover:text-charcoal transition-colors" />
