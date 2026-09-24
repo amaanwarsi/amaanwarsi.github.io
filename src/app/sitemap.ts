@@ -1,11 +1,12 @@
 import { MetadataRoute } from 'next'
 import fs from 'fs'
 import path from 'path'
+import { siteConfig } from '@/config/site'
 
 export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://amaanwarsi.thedev.id/'
+  const baseUrl = siteConfig.url
 
   // Dynamically fetch all case studies from the work directory
   const workDir = path.join(process.cwd(), 'src/app/work')
@@ -41,6 +42,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/labs`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/resume`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
       priority: 0.5,
     },
     {

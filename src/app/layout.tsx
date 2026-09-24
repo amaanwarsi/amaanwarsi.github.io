@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
+import { siteConfig } from "@/config/site";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -15,28 +16,44 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://amaanwarsi.thedev.id"),
-  title: "Amaan Warsi - Backend Engineer & Systems Builder",
-  description: "I build resilient backend systems and full-stack products.",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: "Amaan Warsi — Product-Minded Engineer",
+    template: "%s | Amaan Warsi"
+  },
+  description: siteConfig.description,
   keywords: [
-    "amaan warsi", "mr. amaan warsi", "backend engineer", "systems builder",
+    "amaan warsi", "mr. amaan warsi", "product-minded engineer", "product builder",
     "web developer", "freelancer", "portfolio", "next.js"
   ],
+  authors: [
+    {
+      name: "Amaan Warsi",
+      url: siteConfig.url,
+    }
+  ],
+  creator: "Amaan Warsi",
   openGraph: {
-    type: "profile",
-    title: "Amaan Warsi - Backend Engineer & Systems Builder",
-    description: "I build resilient backend systems and full-stack products.",
-    url: "https://amaanwarsi.thedev.id/",
-    firstName: "Amaan",
-    lastName: "Warsi",
-    images: [
-      {
-        url: "/assets/images/amaanwarsi-1.jpg",
-      }
-    ]
+    type: "website",
+    locale: "en_US",
+    url: siteConfig.url,
+    title: "Amaan Warsi — Product-Minded Engineer",
+    description: siteConfig.ogDescription,
+    siteName: "Amaan Warsi Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Amaan Warsi — Product-Minded Engineer",
+    description: siteConfig.ogDescription,
+    creator: "@itsamaanwarsi",
   },
   verification: {
     google: "pkpr4JpqcEbopxgcnEa31BDWuZXokn8UbR1cSLdfjGk",
+  },
+  icons: {
+    icon: "/images/logo.webp",
+    shortcut: "/images/logo.webp",
+    apple: "/images/logo.webp",
   },
 };
 
@@ -45,45 +62,39 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "@id": "https://amaanwarsi.thedev.id/#website",
-      "url": "https://amaanwarsi.thedev.id/",
-      "name": "Amaan Warsi - Backend Engineer & Systems Builder",
+      "@id": `${siteConfig.url}/#website`,
+      "url": `${siteConfig.url}/`,
+      "name": "Amaan Warsi — Product-Minded Engineer",
       "inLanguage": "en",
     },
     {
       "@context": "https://schema.org",
       "@type": "ProfilePage",
-      "@id": "https://amaanwarsi.thedev.id/#webpage",
-      "url": "https://amaanwarsi.thedev.id/",
-      "name": "Amaan Warsi - Backend Engineer & Systems Builder",
+      "@id": `${siteConfig.url}/#webpage`,
+      "url": `${siteConfig.url}/`,
+      "name": "Amaan Warsi — Product-Minded Engineer",
       "isPartOf": {
-        "@id": "https://amaanwarsi.thedev.id/#website"
+        "@id": `${siteConfig.url}/#website`
       },
       "mainEntity": {
         "@type": "Person",
-        "@id": "https://amaanwarsi.thedev.id/#person",
+        "@id": `${siteConfig.url}/#person`,
         "name": "Amaan Warsi",
-        "url": "https://amaanwarsi.thedev.id/",
-        "image": "https://amaanwarsi.thedev.id/assets/images/amaanwarsi-1.jpg",
-        "jobTitle": "Backend Engineer & Systems Builder",
-        "description": "I build resilient backend systems and full-stack products.",
-        "sameAs": [
-          "https://www.linkedin.com/in/amaanwarsi/",
-          "https://github.com/amaanwarsi",
-          "https://www.instagram.com/amaanibnsuhail/",
-          "https://youtube.com/@amaanwarsiii",
-          "https://www.facebook.com/its.amaanwarsi",
-          "https://x.com/itsamaanwarsi"
-        ],
+        "url": `${siteConfig.url}/`,
+        "image": `${siteConfig.url}/opengraph-image`,
+        "jobTitle": "Product-Minded Engineer",
+        "description": siteConfig.description,
+        "sameAs": Object.values(siteConfig.links),
         "knowsAbout": [
-          "Backend Engineering",
-          "System Design",
-          "Software Architecture",
-          "Distributed Systems",
-          "Scalable Systems",
-          "API Design",
-          "Systems Engineering",
-          "Product Development"
+          "Product Management",
+          "Product Development",
+          "Product Discovery",
+          "User Research",
+          "Product Strategy",
+          "Product Requirements",
+          "Product Engineering",
+          "Software Engineering",
+          "System Design"
         ],
         "address": {
           "@type": "PostalAddress",
