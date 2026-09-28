@@ -246,7 +246,7 @@ export default function Home() {
               </div>
             </GlowCard>
 
-            <GlowCard href="/work/dar-al-safa" className="flex flex-col justify-between min-h-[260px] px-8 pt-8 pb-4 md:px-10 md:pt-10 md:pb-4">
+            <GlowCard href="/work/daralsafa" className="flex flex-col justify-between min-h-[260px] px-8 pt-8 pb-4 md:px-10 md:pt-10 md:pb-4">
               <div className="space-y-4">
                 <h3 className="text-2xl font-poppins font-medium text-charcoal group-hover:text-accent transition-colors">Dar Al Safa</h3>
                 <p className="text-earth leading-relaxed font-inter font-light">

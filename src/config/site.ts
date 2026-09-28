@@ -12,6 +12,6 @@ export const siteConfig = {
     youtube: "https://youtube.com/@amaanwarsiii",
     facebook: "https://www.facebook.com/its.amaanwarsi"
   },
-  resume: "https://docs.google.com/document/d/116c_i5jgihenl_jJuivDsZDccStrXxyjT81ycWJIwd0/export?format=pdf",
-  resumePreview: "https://docs.google.com/document/d/116c_i5jgihenl_jJuivDsZDccStrXxyjT81ycWJIwd0/preview",
+  resume: "https://docs.google.com/document/d/1bhbbM3Lqm5w0n-D4vOZCi4fPObjdsEupoO8tlgTavwM/export?format=pdf",
+  resumePreview: "https://docs.google.com/document/d/1bhbbM3Lqm5w0n-D4vOZCi4fPObjdsEupoO8tlgTavwM/preview",
 };
