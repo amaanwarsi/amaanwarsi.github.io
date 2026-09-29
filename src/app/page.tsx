@@ -6,7 +6,7 @@ import { Navbar } from "@/components/Navbar";
 import { CommandPalette } from "@/components/CommandPalette";
 import { Footer } from "@/components/Footer";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
-import { MouseEvent, useState, useEffect } from "react";
+import { MouseEvent } from "react";
 import { cn } from "@/lib/utils";
 import { ArrowRight, ArrowUpRight, Server, Smartphone, Terminal, Lightbulb, Layout, Sliders, Rocket/*, ChevronLeft, ChevronRight*/ } from "lucide-react";
 import { siteConfig } from "@/config/site";

@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Search,
-  FileText,
   Terminal,
   Code,
   BookOpen,
@@ -12,11 +11,11 @@ import {
   X,
   User,
   Briefcase,
-  MessageSquare,
   Mail,
   FileCheck,
   Award
 } from "lucide-react";
+
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 
@@ -103,7 +102,7 @@ export function CommandPalette() {
                 placeholder="Search projects, skills, or contact..."
                 className="flex-1 min-w-0 bg-transparent border-none outline-none text-charcoal placeholder:text-earth/60 text-sm font-inter"
               />
-              
+
               <AnimatePresence>
                 {query.length > 0 && (
                   <motion.button

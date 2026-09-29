@@ -2,22 +2,23 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { ArrowLeft, ArrowRight, ExternalLink, X, Mail } from "lucide-react";
+import { ArrowLeft, ArrowRight, ExternalLink, Smartphone, Sparkles, Headset } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { EndOfDemo } from "@/components/EndOfDemo";
 import { CaseStudyTOC, TOCItem } from "@/components/CaseStudyTOC";
-import { siteConfig } from "@/config/site";
 import { PRDModal } from "@/components/PRDModal";
 
 const TOC_ITEMS: TOCItem[] = [
   { id: "overview", label: "Overview", number: "01" },
-  { id: "problem", label: "Problem", number: "02" },
-  { id: "why-now", label: "Why Now?", number: "03" },
-  { id: "product", label: "Product", number: "04" },
-  { id: "engineering", label: "Engineering", number: "05" },
-  { id: "artifacts", label: "Artifacts", number: "06" },
+  { id: "problem", label: "The Problem", number: "02" },
+  { id: "users", label: "The Users", number: "03" },
+  { id: "mvp", label: "The MVP", number: "04" },
+  { id: "business-model", label: "Business Model", number: "05" },
+  { id: "architecture", label: "Architecture", number: "06" },
+  { id: "trade-offs", label: "Trade-offs", number: "07" },
+  { id: "learnings", label: "Learnings", number: "08" },
+  { id: "artifacts", label: "Artifacts", number: "09" },
 ];
-
 
 export default function ZaykaTapCaseStudy() {
   const [prdOpen, setPrdOpen] = useState(false);
@@ -63,7 +64,7 @@ export default function ZaykaTapCaseStudy() {
                   </div>
                 </div>
                 <p className="text-xl text-earth leading-relaxed font-inter font-light">
-                  I built ZaykaTap to fix a glaring hole in the hospitality industry: bridging the gap between hungry customers, busy kitchens, and the food vendors that supply them—all running on a ridiculously fast, highly resilient tech stack.
+                  ZaykaTap is a marketplace connecting food vendors and cafés. For cafés, it provides free QR menus, live ordering, and table management. For food vendors, it opens a targeted B2B channel to reach those exact cafés.
                 </p>
                 {/* Inline meta — no cards */}
                 <div className="flex flex-wrap gap-x-6 gap-y-1 pt-1 text-sm font-inter">
@@ -76,196 +77,219 @@ export default function ZaykaTapCaseStudy() {
             </section>
 
             {/* 02 Problem */}
-            <section id="problem" className="space-y-4 reveal is-in scroll-mt-28">
+            <section id="problem" className="space-y-8 reveal is-in scroll-mt-28">
               <div className="flex items-center gap-4">
                 <span className="eyebrow">02.</span>
-                <h2 className="text-2xl font-poppins font-medium text-charcoal tracking-[-0.015em]">Problem</h2>
+                <h2 className="text-2xl font-poppins font-medium text-charcoal tracking-[-0.015em]">The problem wasn&apos;t the menu</h2>
                 <div className="eyebrow-rule ml-2" />
               </div>
-              <p className="text-earth leading-relaxed font-inter font-light">
-                Picture a busy cafe on a Saturday night. Customers are waving down staff just to get a menu. When they finally order, it&apos;s jotted on paper and walked to the kitchen. It&apos;s slow, error-prone, and frustrating for everyone. Meanwhile, food vendors are blindly trying to sell their supplies to these exact cafes with zero targeted reach.
+              
+              <p className="text-xl text-earth leading-relaxed font-inter font-light">
+                Restaurants already had digital menus. They didn&apos;t have a simple way to turn them into <span className="font-medium text-charcoal">live ordering systems.</span>
               </p>
-              <p className="text-earth leading-relaxed font-inter font-light">
-                The catch? Any digital fix had to survive the chaos of the real world: spotty cafe Wi-Fi, low-end smartphones dropping connection, and kitchens that absolutely cannot afford to lose a single order ticket.
-              </p>
+
+              <div className="space-y-10 my-12">
+                {/* Scene 1 */}
+                <div className="space-y-2">
+                  <h3 className="text-sm font-medium text-charcoal font-inter uppercase tracking-widest">Scene 1: The Café</h3>
+                  <p className="text-earth leading-relaxed font-inter font-light">
+                    Picture a busy café on a Saturday night. Customers are waving down staff just to get a menu. When they finally order, it&apos;s jotted on paper and walked to the kitchen. It&apos;s slow, error-prone, and deeply frustrating.
+                  </p>
+                </div>
+
+                {/* Scene 2 */}
+                <div className="space-y-2">
+                  <h3 className="text-sm font-medium text-charcoal font-inter uppercase tracking-widest">Scene 2: The Vendor</h3>
+                  <p className="text-earth leading-relaxed font-inter font-light">
+                    Meanwhile, food vendors are blindly trying to sell their supplies to these exact cafés with zero targeted reach. They rely on cold calls and physical walk-ins, entirely missing the venues that need them most.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-16 py-8 flex flex-col items-center justify-center text-center">
+                <span className="text-xs uppercase tracking-widest text-earth/50 font-mono mb-4">The Insight</span>
+                <p className="text-xl md:text-2xl font-inter font-light text-charcoal leading-relaxed max-w-2xl">
+                  I saw a massive gap in the market: solve the café&apos;s chaos, and you build the exact audience the vendors want to reach.
+                </p>
+              </div>
             </section>
 
-            {/* 03 Why Now? */}
-            <section id="why-now" className="space-y-4 reveal is-in scroll-mt-28">
+            {/* 03 Users */}
+            <section id="users" className="space-y-4 reveal is-in scroll-mt-28">
               <div className="flex items-center gap-4">
                 <span className="eyebrow">03.</span>
-                <h2 className="text-2xl font-poppins font-medium text-charcoal tracking-[-0.015em]">Why Now?</h2>
+                <h2 className="text-2xl font-poppins font-medium text-charcoal tracking-[-0.015em]">Three users, three different problems</h2>
                 <div className="eyebrow-rule ml-2" />
               </div>
               <p className="text-earth leading-relaxed font-inter font-light">
-                Post-pandemic, QR menus were everywhere, but honestly, looking at what the competitors were offering was depressing. They were either glorified, static PDFs you had to awkwardly pinch and zoom, or clunky, ugly web apps that looked like they were built a decade ago. Small cafes were left stitching together these terrible links with WhatsApp messages because they were priced out of enterprise POS systems.
-              </p>
-              <p className="text-earth leading-relaxed font-inter font-light">
-                I knew the biggest differentiator wouldn&apos;t just be having a digital menu—it had to be <em className="font-medium text-charcoal not-italic">speed and sheer aesthetic quality</em>. I wanted to build an ordering engine that didn&apos;t just do the heavy lifting for the kitchen, but actually felt like a premium, native app experience for the customer.
-              </p>
-            </section>
-
-            {/* 04 Product */}
-            <section id="product" className="space-y-6 reveal is-in scroll-mt-28">
-              <div className="flex items-center gap-4">
-                <span className="eyebrow">04.</span>
-                <h2 className="text-2xl font-poppins font-medium text-charcoal tracking-[-0.015em]">Product</h2>
-                <div className="eyebrow-rule ml-2" />
-              </div>
-              <p className="text-earth leading-relaxed font-inter font-light">
-                ZaykaTap ships as a unified marketplace. I owned the end-to-end delivery—from sketching the initial database schema to publishing the cross-platform apps and writing the payment logic.
+                Any solution had to survive the chaos of the real world and satisfy three distinct groups:
               </p>
               <ul className="space-y-3 text-earth leading-relaxed font-inter font-light list-disc list-outside ml-5">
-                <li><strong className="font-medium text-charcoal">For Customers:</strong> Scan a table QR code and instantly drop into a buttery-smooth, beautifully designed digital menu. It&apos;s lightning fast, highly visual, and completely frictionless—place orders directly to the kitchen without ever downloading an app.</li>
-                <li><strong className="font-medium text-charcoal">For Kitchens:</strong> Live order tickets pop up instantly on a React Native app we shipped to the Play Store.</li>
-                <li><strong className="font-medium text-charcoal">For Vendors:</strong> Targeted ad placements to reach cafes directly, opening a new B2B sales channel.</li>
+                <li><strong className="font-medium text-charcoal">Customers:</strong> They just want to order food. They don&apos;t want to download an app or pinch-and-zoom a static PDF on spotty 3G.</li>
+                <li><strong className="font-medium text-charcoal">Kitchens:</strong> They need chaos reduced. Live order tickets absolutely cannot get lost, and low-end tablets dropping Wi-Fi can&apos;t break the system.</li>
+                <li><strong className="font-medium text-charcoal">Food Vendors:</strong> They need targeted reach. They want to advertise and sell supplies directly to the cafés that need them most.</li>
               </ul>
-              <p className="text-earth leading-relaxed font-inter font-light pt-2">
-                We monetize through two clear paths: paid white-label subscriptions for cafes who want their own branding, and premium ad rankings for food vendors.
+            </section>
+
+            {/* 04 MVP */}
+            <section id="mvp" className="space-y-4 reveal is-in scroll-mt-28">
+              <div className="flex items-center gap-4">
+                <span className="eyebrow">04.</span>
+                <h2 className="text-2xl font-poppins font-medium text-charcoal tracking-[-0.015em]">The MVP I actually needed</h2>
+                <div className="eyebrow-rule ml-2" />
+              </div>
+              <p className="text-earth leading-relaxed font-inter font-light">
+                I could have built a massive restaurant management system. Instead, I focused on speed and a frictionless ordering flow. Competitors were offering clunky web apps that looked a decade old. Small cafés were priced out of enterprise POS systems.
+              </p>
+              <p className="text-earth leading-relaxed font-inter font-light">
+                I decided to build exactly what they needed, nothing more: QR menus, live ordering directly to the kitchen, basic table management, and simple analytics. It had to feel like a premium, native app experience for the customer, right in the browser.
               </p>
             </section>
 
-            {/* 05 Engineering */}
-            <section id="engineering" className="space-y-8 reveal is-in scroll-mt-28">
+            {/* 05 Business Model */}
+            <section id="business-model" className="space-y-4 reveal is-in scroll-mt-28">
               <div className="flex items-center gap-4">
                 <span className="eyebrow">05.</span>
-                <h2 className="text-2xl font-poppins font-medium text-charcoal tracking-[-0.015em]">Engineering</h2>
+                <h2 className="text-2xl font-poppins font-medium text-charcoal tracking-[-0.015em]">Why cafés get the core product for free</h2>
                 <div className="eyebrow-rule ml-2" />
               </div>
+              <p className="text-earth leading-relaxed font-inter font-light">
+                I could have charged cafés a flat subscription from day one. Instead, I kept the entire core platform—unlimited orders, unlimited tables, and basic AI analytics—completely free.
+              </p>
+              <p className="text-earth leading-relaxed font-inter font-light">
+                That removed all friction for adoption. A café can sign up and digitize their entire operation without paying a dime. In the future, paid subscriptions will target power users who need premium capabilities:
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6 reveal-stagger is-in">
+                <div className="card p-5 space-y-3 group hover:border-accent/30 transition-colors">
+                  <div className="w-8 h-8 rounded-full bg-surface border border-line flex items-center justify-center text-charcoal group-hover:scale-110 group-hover:bg-accent group-hover:text-white transition-all">
+                    <Smartphone className="w-4 h-4" />
+                  </div>
+                  <div className="text-sm font-medium text-charcoal font-inter">White-label Apps</div>
+                  <p className="text-xs text-earth/70 font-light font-inter leading-relaxed">Custom branded apps for top-tier venues.</p>
+                </div>
+                <div className="card p-5 space-y-3 group hover:border-accent/30 transition-colors">
+                  <div className="w-8 h-8 rounded-full bg-surface border border-line flex items-center justify-center text-charcoal group-hover:scale-110 group-hover:bg-accent group-hover:text-white transition-all">
+                    <Sparkles className="w-4 h-4" />
+                  </div>
+                  <div className="text-sm font-medium text-charcoal font-inter">Advanced AI</div>
+                  <p className="text-xs text-earth/70 font-light font-inter leading-relaxed">Predictive demand and inventory forecasting.</p>
+                </div>
+                <div className="card p-5 space-y-3 group hover:border-accent/30 transition-colors">
+                  <div className="w-8 h-8 rounded-full bg-surface border border-line flex items-center justify-center text-charcoal group-hover:scale-110 group-hover:bg-accent group-hover:text-white transition-all">
+                    <Headset className="w-4 h-4" />
+                  </div>
+                  <div className="text-sm font-medium text-charcoal font-inter">Priority Support</div>
+                  <p className="text-xs text-earth/70 font-light font-inter leading-relaxed">Dedicated SLA and 24/7 direct assistance.</p>
+                </div>
+              </div>
+              <p className="text-earth leading-relaxed font-inter font-light mt-4">
+                By giving away the core infrastructure, we rapidly onboarded cafés, building the precise, highly engaged audience that food vendors pay to reach.
+              </p>
+            </section>
 
+            {/* 06 Architecture */}
+            <section id="architecture" className="space-y-8 reveal is-in scroll-mt-28">
+              <div className="flex items-center gap-4">
+                <span className="eyebrow">06.</span>
+                <h2 className="text-2xl font-poppins font-medium text-charcoal tracking-[-0.015em]">When live orders changed the architecture</h2>
+                <div className="eyebrow-rule ml-2" />
+              </div>
+              
               <div className="space-y-4">
-                <p className="text-xl text-charcoal leading-relaxed font-inter font-light">
-                  I didn&apos;t just want to build a prototype. I wanted to build this the right way—production-ready, highly resilient, and ridiculously fast.
+                <p className="text-earth leading-relaxed font-inter font-light">
+                  Live orders made stale data unacceptable. That pushed the architecture toward WebSockets and caching rather than repeated database polling.
+                </p>
+                <p className="text-earth leading-relaxed font-inter font-light">
+                  If every customer phone and kitchen tablet hammered the database with SQL queries to check for new orders, the server would melt. Instead, when a customer pays, the order drops into the database once, then instantly fires through Redis to trigger a WebSocket event. The kitchen hears a &ldquo;ding!&rdquo; in milliseconds.
+                </p>
+                
+                <h3 className="text-lg font-poppins font-medium text-charcoal mt-6">Structuring for scale without microservices</h3>
+                <p className="text-earth leading-relaxed font-inter font-light">
+                  To keep the heavy B2B admin panels from slowing down the high-traffic customer frontend, I split the monolith across strict subdomains:
                 </p>
 
-                <h3 className="text-lg font-poppins font-medium text-charcoal mt-6">The Architecture</h3>
-                <p className="text-earth leading-relaxed font-inter font-light">
-                  I designed a monolith-ready-for-microservices backend using PHP. I spun up a raw VPS, containerized everything with Docker and Nginx, and automated deployments via GitHub Actions for true zero-downtime shipping.
-                </p>
-                <p className="text-earth leading-relaxed font-inter font-light">
-                  To keep things perfectly isolated, I split the stack across strict subdomains:
-                </p>
                 <div className="overflow-x-auto mt-6">
                   <table className="w-full text-left border-collapse min-w-[500px]">
                     <thead>
                       <tr className="border-b border-line text-xs font-mono uppercase tracking-widest text-earth/50">
                         <th className="py-3 px-4 font-normal w-1/4">Subdomain</th>
-                        <th className="py-3 px-4 font-normal w-1/4">Role</th>
-                        <th className="py-3 px-4 font-normal w-1/2">Strategy</th>
+                        <th className="py-3 px-4 font-normal w-3/4">Product Reasoning</th>
                       </tr>
                     </thead>
                     <tbody className="text-sm font-inter font-light text-earth/80">
                       <tr className="border-b border-line/50 hover:bg-surface/50 transition-colors">
                         <td className="py-3 px-4 font-mono text-charcoal font-medium">api.</td>
-                        <td className="py-3 px-4 font-medium text-charcoal">Business Logic</td>
-                        <td className="py-3 px-4 leading-relaxed">Centralized logic, independently scalable. Easily swapped for microservices if load dictates.</td>
+                        <td className="py-3 px-4 leading-relaxed">Centralized business logic. Handles RabbitMQ retries for payment webhooks to ensure zero dropped orders.</td>
                       </tr>
                       <tr className="border-b border-line/50 hover:bg-surface/50 transition-colors">
                         <td className="py-3 px-4 font-mono text-charcoal font-medium">app.</td>
-                        <td className="py-3 px-4 font-medium text-charcoal">Cafe Dashboard</td>
-                        <td className="py-3 px-4 leading-relaxed">Keeps heavy B2B admin panels completely separate from the high-traffic customer frontend.</td>
+                        <td className="py-3 px-4 leading-relaxed">Café dashboard. Kept completely separate from the customer frontend so heavy analytics queries don&apos;t impact ordering speed.</td>
                       </tr>
                       <tr className="border-b border-line/50 hover:bg-surface/50 transition-colors">
                         <td className="py-3 px-4 font-mono text-charcoal font-medium">menu.</td>
-                        <td className="py-3 px-4 font-medium text-charcoal">Customer UI</td>
-                        <td className="py-3 px-4 leading-relaxed">Aggressively optimized, blazing-fast frontend designed directly for patrons on mobile networks.</td>
-                      </tr>
-                      <tr className="border-b border-line/50 hover:bg-surface/50 transition-colors">
-                        <td className="py-3 px-4 font-mono text-charcoal font-medium">auth.</td>
-                        <td className="py-3 px-4 font-medium text-charcoal">Security</td>
-                        <td className="py-3 px-4 leading-relaxed">Locked down for generating tokens and handling OAuth without exposing core application logic.</td>
-                      </tr>
-                      <tr className="border-b border-line/50 hover:bg-surface/50 transition-colors">
-                        <td className="py-3 px-4 font-mono text-charcoal font-medium">static.</td>
-                        <td className="py-3 px-4 font-medium text-charcoal">Assets &amp; Media</td>
-                        <td className="py-3 px-4 leading-relaxed">Routes all minified, gzipped scripts and user-uploaded media. Designed for a frictionless flip to a CDN as traffic scales.</td>
+                        <td className="py-3 px-4 leading-relaxed">Aggressively optimized customer UI. Uses DOM virtualization to render massive menus instantly on cheap smartphones.</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
+            </section>
 
-              <div className="space-y-4">
-                <h3 className="text-lg font-poppins font-medium text-charcoal">Frontend Performance: Surviving the Wild</h3>
-                <p className="text-earth leading-relaxed font-inter font-light">
-                  Restaurant menus are notoriously heavy. Hundreds of items, massive images, spotty 3G. If this lagged, users would bounce immediately.
-                </p>
-                <p className="text-earth leading-relaxed font-inter font-light">
-                  Before a cafe owner&apos;s image ever hits my server, it&apos;s processed client-side—compressed and converted to WebP. On the customer side, I built an aggressive DOM virtualization engine. We render the first 5 items instantly, and lazy-load the rest on scroll. The result? A Time to Interactive (TTI) of under 1.5 seconds on a 3G network and zero memory crashes on cheap Android phones.
-                </p>
+            {/* 07 Trade-offs */}
+            <section id="trade-offs" className="space-y-4 reveal is-in scroll-mt-28">
+              <div className="flex items-center gap-4">
+                <span className="eyebrow">07.</span>
+                <h2 className="text-2xl font-poppins font-medium text-charcoal tracking-[-0.015em]">What I deliberately left out</h2>
+                <div className="eyebrow-rule ml-2" />
               </div>
+              <p className="text-earth leading-relaxed font-inter font-light">
+                I ruthlessly cut server costs for edge cases to keep the product economically viable.
+              </p>
+              <p className="text-earth leading-relaxed font-inter font-light">
+                For example, generating pixel-perfect PDF menus with complex templates and QR codes is computationally heavy. I completely stripped that from the backend and shifted it to the client-side of the React Native app. The server doesn&apos;t even know it&apos;s happening.
+              </p>
+              <p className="text-earth leading-relaxed font-inter font-light">
+                Similarly, before a café owner&apos;s image upload ever hits my server, it&apos;s processed client-side and converted to WebP. This reduced initial payloads by 70–80%, improving the Time to Interactive (TTI) on 3G networks without increasing server load.
+              </p>
+            </section>
 
-              <div className="space-y-4">
-                <h3 className="text-lg font-poppins font-medium text-charcoal">Backend Resilience: Beating the Database</h3>
-                <p className="text-earth leading-relaxed font-inter font-light">
-                  Live ordering means constant updates. But if every customer phone and kitchen tablet is hammering the database with SQL polling queries, the server melts.
-                </p>
-                <p className="text-earth leading-relaxed font-inter font-light">
-                  Instead, I introduced Redis. When a customer pays, the order drops into the database once, then instantly fires through Redis to trigger a WebSocket event. The kitchen hears a &ldquo;ding!&rdquo; in milliseconds, and the database barely breaks a sweat. This cut I/O load by 90%.
-                </p>
+            {/* 08 Learnings */}
+            <section id="learnings" className="space-y-4 reveal is-in scroll-mt-28">
+              <div className="flex items-center gap-4">
+                <span className="eyebrow">08.</span>
+                <h2 className="text-2xl font-poppins font-medium text-charcoal tracking-[-0.015em]">What building it taught me</h2>
+                <div className="eyebrow-rule ml-2" />
               </div>
+              <p className="text-earth leading-relaxed font-inter font-light">
+                Building a two-sided marketplace forced me to make pragmatic technical choices. I learned that technical constraints often drive better product decisions. Moving heavy image processing and PDF generation to the client-side wasn&apos;t just cheaper—it made the core backend significantly more resilient.
+              </p>
+              <p className="text-earth leading-relaxed font-inter font-light">
+                Most importantly, I learned that small businesses don&apos;t care about the tech stack or perfect code. They care if the kitchen tablet rings the instant a customer pays. If it works consistently, they trust it.
+              </p>
 
-              <div className="space-y-4">
-                <h3 className="text-lg font-poppins font-medium text-charcoal">Taming the Chaos with RabbitMQ</h3>
-                <p className="text-earth leading-relaxed font-inter font-light">
-                  Payment gateways love to timeout or send duplicate webhooks. I couldn&apos;t risk charging a customer twice or failing to activate a cafe&apos;s subscription.
-                </p>
-                <p className="text-earth leading-relaxed font-inter font-light">
-                  My webhook endpoint is dead simple: validate the signature, save it for a strict idempotency check, and return 200 OK instantly. The heavy lifting—activating subscriptions, generating tokens, firing emails—is tossed to RabbitMQ. It handles retries in the background, keeping the core API completely unblocked.
-                </p>
-                <p className="text-earth leading-relaxed font-inter font-light">
-                  I also ruthlessly cut server costs for the weird edge cases. Generating pixel-perfect PDF menus with complex templates and QR codes? I completely stripped that from the backend and shifted it to the client-side of the React Native app. The server doesn&apos;t even know it&apos;s happening.
-                </p>
-              </div>
-
-              <div className="space-y-4 mt-10">
-                <h3 className="text-lg font-poppins font-medium text-charcoal">The Impact</h3>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 reveal-stagger is-in">
-                  <div className="card p-6 space-y-2">
-                    <div className="text-3xl font-poppins font-medium text-charcoal">&lt; 1.5s</div>
-                    <div className="text-sm font-medium text-accent font-inter">Time to Interactive (3G)</div>
-                    <p className="text-xs text-earth/70 leading-relaxed pt-2 border-t border-line font-inter font-light">
-                      Reduced initial payload by 70–80% via client-side WebP conversion, compressing assets before they even touch the server.
-                    </p>
-                  </div>
-
-                  <div className="card p-6 space-y-2">
-                    <div className="text-3xl font-poppins font-medium text-charcoal">90%</div>
-                    <div className="text-sm font-medium text-accent font-inter">Lower Database I/O</div>
-                    <p className="text-xs text-earth/70 leading-relaxed pt-2 border-t border-line font-inter font-light">
-                      Bypassed SQL polling completely by routing real-time kitchen updates through Redis and WebSockets.
-                    </p>
-                  </div>
-
-                  <div className="card p-6 space-y-2">
-                    <div className="text-3xl font-poppins font-medium text-charcoal">~100%</div>
-                    <div className="text-sm font-medium text-accent font-inter">Payment Reliability</div>
-                    <p className="text-xs text-earth/70 leading-relaxed pt-2 border-t border-line font-inter font-light">
-                      Zero duplicate billing. Webhooks acknowledge in &lt;100ms while RabbitMQ handles the heavy subscription logic in the background.
-                    </p>
-                  </div>
-
-                  <div className="card p-6 space-y-2">
-                    <div className="text-3xl font-poppins font-medium text-charcoal">70%</div>
-                    <div className="text-sm font-medium text-accent font-inter">Lower Memory Footprint</div>
-                    <p className="text-xs text-earth/70 leading-relaxed pt-2 border-t border-line font-inter font-light">
-                      Virtualization prevents low-end Androids from crashing on massive 500+ item menus by prioritizing the first 5 elements.
-                    </p>
-                  </div>
+              {/* Metrics grid — framed as internal testing or design outcomes where needed */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 reveal-stagger is-in">
+                <div className="card p-6 space-y-2">
+                  <div className="text-3xl font-poppins font-medium text-charcoal">&lt; 1.5s</div>
+                  <div className="text-sm font-medium text-accent font-inter">Time to Interactive (3G)</div>
+                  <p className="text-xs text-earth/70 leading-relaxed pt-2 border-t border-line font-inter font-light">
+                    Achieved via aggressive client-side compression and DOM virtualization.
+                  </p>
                 </div>
-
-                {/* Near-Zero Operational Cost — redesigned as inline callout text */}
-                <p className="text-sm text-earth/70 leading-relaxed font-inter font-light border-l-2 border-line pl-4 mt-2">
-                  By aggressively offloading heavy tasks (like shifting complex PDF template generation entirely to the client-side app) and heavily caching assets, the entire architecture scales to the first 1,000 users on a single, low-cost VPS with true zero-downtime deployments.
-                </p>
+                <div className="card p-6 space-y-2">
+                  <div className="text-3xl font-poppins font-medium text-charcoal">90%</div>
+                  <div className="text-sm font-medium text-accent font-inter">Lower Database I/O</div>
+                  <p className="text-xs text-earth/70 leading-relaxed pt-2 border-t border-line font-inter font-light">
+                    Internal testing showed massive drops in load by bypassing SQL polling for WebSockets.
+                  </p>
+                </div>
               </div>
             </section>
 
-            {/* 06 Artifacts */}
+            {/* 09 Artifacts */}
             <section id="artifacts" className="space-y-6 reveal is-in scroll-mt-28 pb-12">
               <div className="flex items-center gap-4">
-                <span className="eyebrow">06.</span>
+                <span className="eyebrow">09.</span>
                 <h2 className="text-2xl font-poppins font-medium text-charcoal tracking-[-0.015em]">Artifacts</h2>
                 <div className="eyebrow-rule ml-2" />
               </div>
