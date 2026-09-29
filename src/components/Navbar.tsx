@@ -41,6 +41,7 @@ export function Navbar() {
         <nav className="flex gap-4 sm:gap-6 text-sm text-earth items-center">
           <Link href="#work" className="nav-link hidden sm:block">Work</Link>
           <Link href="#about" className="nav-link hidden sm:block">About</Link>
+          <Link href="#certifications" className="nav-link hidden sm:block">Certifications</Link>
           <Link href="#contact" className="nav-link hidden sm:block">Contact</Link>
 
           <button

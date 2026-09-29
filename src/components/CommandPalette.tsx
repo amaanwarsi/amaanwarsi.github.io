@@ -14,7 +14,8 @@ import {
   Briefcase,
   MessageSquare,
   Mail,
-  FileCheck
+  FileCheck,
+  Award
 } from "lucide-react";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
@@ -26,14 +27,15 @@ const MENU_DATA = [
       { label: "About Me", href: "/#about", icon: User },
       { label: "How I Build Products", href: "/#process", icon: Code },
       { label: "Experience", href: "/#experience", icon: Clock },
-      { label: "Case Studies", href: "/#case-studies", icon: FileText },
-      { label: "Client Feedback", href: "/#testimonials", icon: MessageSquare }
+      // { label: "Case Studies", href: "/#case-studies", icon: FileText },
+      // { label: "Client Feedback", href: "/#testimonials", icon: MessageSquare } // commented out until real quotes are available
     ]
   },
   {
     category: "Background", items: [
       { label: "Engineering", href: "/#skills", icon: Terminal },
-      { label: "Education", href: "/#education", icon: BookOpen }
+      { label: "Education", href: "/#education", icon: BookOpen },
+      { label: "Certifications", href: "/#certifications", icon: Award }
     ]
   },
   {

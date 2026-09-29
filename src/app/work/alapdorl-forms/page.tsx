@@ -47,12 +47,14 @@ export default function AlapdorlFormsCaseStudy() {
           </div>
         </section>
 
+        {/* Demo section — commented out until screenshots/video are ready
         <section className="space-y-4 reveal is-in">
           <h2 className="text-2xl font-poppins font-medium text-charcoal">Demo</h2>
           <div className="bg-surface border border-line border-dashed aspect-video rounded-xl flex items-center justify-center text-earth/60">
             TODO: Insert Alapdorl Forms screenshots or demo video
           </div>
         </section>
+        */}
         <EndOfDemo projectName="Alapdorl Forms" />
       </article>
       </main>

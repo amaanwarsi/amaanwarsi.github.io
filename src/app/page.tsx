@@ -1,13 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Navbar } from "@/components/Navbar";
 import { CommandPalette } from "@/components/CommandPalette";
 import { Footer } from "@/components/Footer";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { MouseEvent, useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import { ArrowRight, ArrowUpRight, Server, Smartphone, Terminal, Lightbulb, Layout, Sliders, Rocket, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Server, Smartphone, Terminal, Lightbulb, Layout, Sliders, Rocket/*, ChevronLeft, ChevronRight*/ } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
 function GlowCard({ children, href, className }: { children: React.ReactNode, href: string, className?: string }) {
@@ -43,6 +44,7 @@ function GlowCard({ children, href, className }: { children: React.ReactNode, hr
   );
 }
 
+/* TESTIMONIALS — commented out until real client quotes are available
 const testimonialsData = [
   {
     quote: "TODO: Exact quote from a freelance client. They need social proof and a low-friction way to reach out. Be sure to use a real quote! This space allows for slightly longer, more impactful quotes.",
@@ -111,7 +113,7 @@ function TestimonialCarousel() {
         </div>
       </div>
 
-      {/* Navigation Arrows */}
+      {/* Navigation Arrows *\/}
       <button
         onClick={prev}
         className="absolute left-0 md:-left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white border border-line flex items-center justify-center text-earth hover:text-charcoal hover:border-line-strong transition-colors shadow-sm z-10 hidden md:flex"
@@ -127,7 +129,7 @@ function TestimonialCarousel() {
         <ChevronRight className="w-5 h-5" />
       </button>
 
-      {/* Dots */}
+      {/* Dots *\/}
       <div className="flex justify-center gap-3 mt-8">
         {testimonialsData.map((_, i) => (
           <button
@@ -144,6 +146,7 @@ function TestimonialCarousel() {
     </div>
   );
 }
+*/
 
 export default function Home() {
   return (
@@ -203,21 +206,21 @@ export default function Home() {
               <div className="space-y-5">
                 <div className="flex flex-row justify-between items-start gap-4">
                   <h3 className="text-3xl font-poppins font-medium text-charcoal group-hover:text-accent transition-colors">ZaykaTap</h3>
-                  
+
                   {/* Desktop: View Details */}
                   <div className="hidden md:inline-flex items-center text-sm font-medium text-earth group-hover:text-accent transition-colors">
                     View Details
                     <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </div>
-                  
+
                   {/* Mobile: Founder Chip */}
                   <span className="chip shrink-0 hover:bg-surface hover:text-accent md:hidden">Founder</span>
                 </div>
-                
+
                 <p className="text-earth max-w-2xl text-lg leading-relaxed font-inter font-light">
                   A marketplace connecting food vendors and cafés, with free QR menus, live ordering, and analytics for cafés. Building the product end-to-end across the café, vendor, and marketplace experience.
                 </p>
-                
+
                 <div className="flex flex-row flex-wrap md:flex-nowrap justify-between items-center md:items-end gap-6 pt-6 border-t border-line">
                   <div className="flex flex-wrap gap-8 text-sm font-mono text-earth/70">
                     <div className="flex flex-col gap-1">
@@ -233,10 +236,10 @@ export default function Home() {
                       <span className="text-[10px] uppercase tracking-[0.1em]">User Sides</span>
                     </div>
                   </div>
-                  
+
                   {/* Desktop: Founder Chip */}
                   <span className="chip shrink-0 hover:bg-surface hover:text-accent hidden md:inline-flex">Founder</span>
-                  
+
                   {/* Mobile: View Details */}
                   <div className="inline-flex md:hidden items-center text-sm font-medium text-earth group-hover:text-accent transition-colors">
                     View Details
@@ -612,7 +615,7 @@ export default function Home() {
           </div>
         </motion.section>
 
-        {/* 6. Case Studies */}
+        {/* 6. Case Studies — Commented out
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -687,6 +690,7 @@ export default function Home() {
 
           </div>
         </motion.section>
+        */}
 
         {/* 7. Education */}
         <motion.section
@@ -698,7 +702,7 @@ export default function Home() {
           className="space-y-10 reveal is-in"
         >
           <div className="flex items-center gap-4">
-            <span className="eyebrow">08.</span>
+            <span className="eyebrow">07.</span>
             <h2 className="text-2xl font-poppins font-medium text-charcoal tracking-[-0.015em]">Education</h2>
             <div className="eyebrow-rule ml-4"></div>
           </div>
@@ -712,7 +716,91 @@ export default function Home() {
           </div>
         </motion.section>
 
-        {/* 8. Social Proof (Testimonials) */}
+        {/* 8. Certifications & Learning */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          id="certifications"
+          className="space-y-10 reveal is-in"
+        >
+          <div className="flex items-center gap-4">
+            <span className="eyebrow">08.</span>
+            <h2 className="text-2xl font-poppins font-medium text-charcoal tracking-[-0.015em]">Certifications & Learning</h2>
+            <div className="eyebrow-rule ml-4"></div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 reveal-stagger is-in">
+            {/* Cert 1 */}
+            <div className="h-full rounded-2xl p-8 flex flex-col items-center text-center gap-6 group">
+              <div className="shrink-0">
+                <Image
+                  src="/images/certificates/product-management-basics-certification.webp"
+                  alt="Product Management Basics Certification badge"
+                  width={160}
+                  height={160}
+                  className="rounded-full object-cover w-36 h-36 sm:w-40 sm:h-40"
+                />
+              </div>
+              <div className="flex-1 flex flex-col items-center gap-3">
+                <h3 className="text-xl font-poppins font-medium text-charcoal tracking-[-0.015em] leading-snug">
+                  Product Management Basics
+                </h3>
+                <div className="flex items-center gap-2 text-sm font-mono text-earth/70">
+                  <span>Pendo</span>
+                  <span className="w-1 h-1 rounded-full bg-line-strong"></span>
+                  <span>Sep 2026</span>
+                </div>
+              </div>
+              <a
+                href="https://credly.com/badges/ab296839-17a0-4cb3-a00b-9e9782787606/public_url"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Verify Product Management Basics Certification on Credly"
+                className="btn-secondary mt-auto"
+              >
+                Verify Credential
+                <ArrowUpRight className="w-4 h-4 ml-2 text-earth/60 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
+            </div>
+
+            {/* Cert 2 */}
+            <div className="h-full rounded-2xl p-8 flex flex-col items-center text-center gap-6 group">
+              <div className="shrink-0">
+                <Image
+                  src="/images/certificates/ai-for-product-management.webp"
+                  alt="AI for Product Management certification badge"
+                  width={160}
+                  height={160}
+                  className="rounded-full object-cover w-36 h-36 sm:w-40 sm:h-40"
+                />
+              </div>
+              <div className="flex-1 flex flex-col items-center gap-3">
+                <h3 className="text-xl font-poppins font-medium text-charcoal tracking-[-0.015em] leading-snug">
+                  AI for Product Management
+                </h3>
+                <div className="flex items-center gap-2 text-sm font-mono text-earth/70">
+                  <span>Pendo</span>
+                  <span className="w-1 h-1 rounded-full bg-line-strong"></span>
+                  <span>Sep 2026</span>
+                </div>
+              </div>
+              <a
+                href="https://credly.com/badges/e686da01-ad3f-4d50-9d5e-4d5303b32da8/public_url"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Verify AI for Product Management certification on Credly"
+                className="btn-secondary mt-auto"
+              >
+                Verify Credential
+                <ArrowUpRight className="w-4 h-4 ml-2 text-earth/60 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
+            </div>
+          </div>
+        </motion.section>
+
+        {/* 9. Social Proof (Testimonials) — commented out until real client quotes are available
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -729,6 +817,7 @@ export default function Home() {
 
           <TestimonialCarousel />
         </motion.section>
+        */}
 
         {/* 9. Contact */}
         <motion.section
@@ -740,12 +829,12 @@ export default function Home() {
           className="space-y-10 pb-10 reveal is-in"
         >
           <div className="flex items-center gap-4">
-            <span className="eyebrow">10.</span>
+            <span className="eyebrow">09.</span>
             <h2 className="text-2xl font-poppins font-medium text-charcoal tracking-[-0.015em]">Get in Touch</h2>
             <div className="eyebrow-rule ml-4"></div>
           </div>
 
-          <div className="bg-surface border border-line p-10 md:p-16 rounded-2xl flex flex-col items-center gap-8 overflow-hidden relative text-center">
+          <div className="bg-surface p-10 md:p-16 rounded-2xl flex flex-col items-center gap-8 overflow-hidden relative text-center">
             <div className="max-w-2xl space-y-6 relative z-10 reveal-stagger is-in">
               <h3 className="text-4xl md:text-5xl font-poppins font-medium text-charcoal tracking-[-0.015em]">Ready to scale your next big idea?</h3>
               <p className="text-earth leading-relaxed text-lg font-inter font-light">
