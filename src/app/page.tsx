@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 import { ArrowRight, ArrowUpRight, Server, Smartphone, Terminal, Lightbulb, Layout, Sliders, Rocket/*, ChevronLeft, ChevronRight*/ } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
-function GlowCard({ children, href, className }: { children: React.ReactNode, href: string, className?: string }) {
+function GlowCard({ children, href, className, "data-umami-event": umamiEvent }: { children: React.ReactNode, href: string, className?: string, "data-umami-event"?: string }) {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
@@ -26,6 +26,7 @@ function GlowCard({ children, href, className }: { children: React.ReactNode, hr
       href={href}
       onMouseMove={handleMouseMove}
       className={cn("card group relative block ", className)}
+      data-umami-event={umamiEvent}
     >
       <motion.div
         className="pointer-events-none absolute -inset-px opacity-0 transition duration-300 group-hover:opacity-100"
@@ -202,7 +203,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 reveal-stagger is-in">
-            <GlowCard href="/work/zaykatap" className="p-8 md:p-10 md:col-span-2">
+            <GlowCard href="/work/zaykatap" className="p-8 md:p-10 md:col-span-2" data-umami-event="view-case-study-zaykatap">
               <div className="space-y-5">
                 <div className="flex flex-row justify-between items-start gap-4">
                   <h3 className="text-3xl font-poppins font-medium text-charcoal group-hover:text-accent transition-colors">ZaykaTap</h3>
@@ -249,7 +250,7 @@ export default function Home() {
               </div>
             </GlowCard>
 
-            <GlowCard href="/work/daralsafa" className="flex flex-col justify-between min-h-[260px] px-8 pt-8 pb-4 md:px-10 md:pt-10 md:pb-4">
+            <GlowCard href="/work/daralsafa" className="flex flex-col justify-between min-h-[260px] px-8 pt-8 pb-4 md:px-10 md:pt-10 md:pb-4" data-umami-event="view-case-study-daralsafa">
               <div className="space-y-4">
                 <h3 className="text-2xl font-poppins font-medium text-charcoal group-hover:text-accent transition-colors">Dar Al Safa</h3>
                 <p className="text-earth leading-relaxed font-inter font-light">
@@ -265,7 +266,7 @@ export default function Home() {
               </div>
             </GlowCard>
 
-            <GlowCard href="/work/alapdorl-forms" className="flex flex-col justify-between min-h-[260px] px-8 pt-8 pb-4 md:px-10 md:pt-10 md:pb-4">
+            <GlowCard href="/work/alapdorl-forms" className="flex flex-col justify-between min-h-[260px] px-8 pt-8 pb-4 md:px-10 md:pt-10 md:pb-4" data-umami-event="view-case-study-alapdorl">
               <div className="space-y-4">
                 <h3 className="text-2xl font-poppins font-medium text-charcoal group-hover:text-accent transition-colors">Alapdorl Forms</h3>
                 <p className="text-earth leading-relaxed font-inter font-light">
@@ -842,11 +843,11 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto relative z-10 pt-4 reveal is-in">
-              <a href={`mailto:${siteConfig.email}`} className="btn-primary">
+              <a href={`mailto:${siteConfig.email}`} className="btn-primary" data-umami-event="click-mailto">
                 Start a Conversation
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
-              <Link href="/resume" className="btn-secondary">
+              <Link href="/resume" className="btn-secondary" data-umami-event="click-resume-link">
                 View Resume
                 <ArrowUpRight className="w-4 h-4 ml-2 text-earth/60 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </Link>

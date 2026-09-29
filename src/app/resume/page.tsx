@@ -29,6 +29,7 @@ export default function ResumePage() {
             href={siteConfig.resume}
             className="btn-primary text-xs py-2 px-4 shadow-sm min-w-0"
             download
+            data-umami-event="download-resume"
           >
             <Download className="w-3.5 h-3.5 mr-1.5 shrink-0" />
             <span className="whitespace-nowrap truncate">Download PDF</span>
